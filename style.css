@@ -1,10 +1,7 @@
-
 @font-face {
   font-family: 'vaud-display';
   src: url('fonts/VaudDisplay-Book.eot');
-  src: url('fonts/VaudDisplay-Book.eot?#iefix') format('embedded-opentype'),
-       url('fonts/VaudDisplay-Book.woff') format('woff'),
-       url('fonts/VaudDisplay-Book.ttf') format('truetype');
+  src: url('fonts/VaudDisplay-Book.eot?#iefix') format('embedded-opentype'), url('fonts/VaudDisplay-Book.woff') format('woff'), url('fonts/VaudDisplay-Book.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
 }
@@ -12,9 +9,7 @@
 @font-face {
   font-family: 'vaud-display';
   src: url('fonts/VaudDisplay-Medium.eot');
-  src: url('fonts/VaudDisplay-Medium.eot?#iefix') format('embedded-opentype'),
-       url('fonts/VaudDisplay-Medium.woff') format('woff'),
-       url('fonts/VaudDisplay-Medium.ttf') format('truetype');
+  src: url('fonts/VaudDisplay-Medium.eot?#iefix') format('embedded-opentype'), url('fonts/VaudDisplay-Medium.woff') format('woff'), url('fonts/VaudDisplay-Medium.ttf') format('truetype');
   font-style: normal;
   font-weight: 500;
 }
@@ -24,8 +19,7 @@
   cursor: default;
 }
 
-html,
-body {
+html, body {
   overflow-x: hidden;
 }
 
@@ -82,7 +76,7 @@ h6 {
 }
 
 video::-webkit-media-controls {
-  display:none !important;
+  display: none !important;
 }
 
 header {
@@ -322,29 +316,32 @@ footer a[href]:hover {
  */
 
 @media screen and (min-width: 800px) and (max-width: 960px) {
-  .osx img { margin: 200px 0 0 }
+  .osx img {
+    margin: 200px 0 0
+  }
 }
 
 @media screen and (max-width: 800px) {
-  .osx img { margin: 200px 0 0 }
+  .osx img {
+    margin: 200px 0 0
+  }
 }
 
 @media screen and (max-width: 600px) {
-  .photos svg { display: none }
-
-  .proj { margin: 0 0 60px }
-
+  .photos svg {
+    display: none
+  }
+  .proj {
+    margin: 0 0 60px
+  }
   .proj.apps {
     margin: 0 0 25px;
   }
-
   .grid .item {
     padding: 0 15px;
     width: 100%;
   }
-
-  .osx .sketch,
-  .osx .twitter {
+  .osx .sketch, .osx .twitter {
     margin: 40px 0 0;
   }
 }
