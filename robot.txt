@@ -1,4 +1,4 @@
 User-Agent: *
-Disallow: /impressum.html
+Disallow: /imprint.html
 Disallow: /privacy.html
 Disallow: /terms.html
