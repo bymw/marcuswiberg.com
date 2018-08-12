@@ -21,7 +21,7 @@
   <header role="banner">
     <h1>Marcus Wiberg, Head of Product</h1>
     <a class="active" href="index.html">Work</a>
-    <a href="about.html">About</a>
+    <a href="about.html" onclick=_gaq.push([‘_trackEvent’, ‘link’, ’clicked’, about us’,, ’true’])>About</a>
     <a href="mailto:at.mw.xx@gmail.com">Contact</a>
   </header>
   <main role="main">
@@ -324,6 +324,7 @@
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-123667003-1', 'auto');
     ga('send', 'pageview');
+    ga('send', 'eventAction': 'Action', 'eventLabel': 'Label');
   </script>
 </body>
 
