@@ -204,31 +204,31 @@ main {
   background : #fff;
 }
 
-.osx {
+.mw {
   background-repeat : no-repeat;
   background-size   : cover;
 }
 
-.osx.sierra {
+.mw.by {
   background-image    : url(img/bg/7T5C5861-s.jpg);
   background-position : center;
 }
 
-.osx.sierra1 {
+.mw.by1 {
   background-image    : url(img/bg/7T5C4083-s.jpg);
   background-position : center;
 }
 
-.osx.sierra2 {
+.mw.by2 {
   background-image    : url(img/bg/7T5C5867-s.jpg);
   background-position : center;
 }
 
-.osx img {
+.mw img {
   margin : 40% 0 0;
 }
 
-.osx .sketch {
+.mw .sketch {
   width     : 92%;
   max-width : 960px;
 }
@@ -262,7 +262,7 @@ footer a[href]:hover {
   screen
   and (min-width : 800px)
   and (max-width : 960px) {
-  .osx img {
+  .mw img {
     margin : 370px 0 0;
   }
 }
@@ -270,7 +270,7 @@ footer a[href]:hover {
 @media
   screen
   and (max-width : 800px) {
-  .osx img {
+  .mw img {
     margin : 320px 0 0;
   }
 }
