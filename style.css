@@ -210,17 +210,32 @@ main {
 }
 
 .mw.by {
-  background-image    : url(img/bg/7T5C5861-s.jpg);
+  background-image    : url(img/sm/bg/7T5C5861-s.jpg);
   background-position : center;
 }
 
 .mw.by1 {
-  background-image    : url(img/bg/7T5C4083-s.jpg);
+  background-image    : url(img/sm/bg/7T5C4083-s.jpg);
   background-position : center;
 }
 
 .mw.by2 {
-  background-image    : url(img/bg/7T5C5867-s.jpg);
+  background-image    : url(img/sm/bg/7T5C5867-s.jpg);
+  background-position : center;
+}
+
+.mw.by3 {
+  background-image    : url(img/sp/bg/876543-s.jpg);
+  background-position : center;
+}
+
+.mw.by4 {
+  background-image    : url(img/sp/bg/45678-s.jpg);
+  background-position : center;
+}
+
+.mw.by5 {
+  background-image    : url(img/ai/bg/456789-s.jpg);
   background-position : center;
 }
 
