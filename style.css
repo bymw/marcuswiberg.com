@@ -259,6 +259,52 @@ main {
   justify-content     : center;
 }
 
+/* —— SCROLL TO TOP */
+
+#return-to-top {
+  display               : none;
+  display               : block;
+  position              : fixed;
+  right                 : 20px;
+  bottom                : 20px;
+  width                 : 50px;
+  height                : 50px;
+  -moz-border-radius    : 35px;
+  -webkit-border-radius : 35px;
+  border-radius         : 35px;
+  background            : rgb(0, 0, 0);
+  background            : rgba(0, 0, 0, 0.7);
+  text-decoration       : none;
+  -moz-transition       : all 0.3s ease;
+  -ms-transition        : all 0.3s ease;
+  -o-transition         : all 0.3s ease;
+  -webkit-transition    : all 0.3s linear;
+  transition            : all 0.3s ease;
+}
+
+#return-to-top i {
+  position           : relative;
+  top                : 13px;
+  left               : 16px;
+  margin             : 0;
+  color              : #fff;
+  font-size          : 19px;
+  -moz-transition    : all 0.3s ease;
+  -ms-transition     : all 0.3s ease;
+  -o-transition      : all 0.3s ease;
+  -webkit-transition : all 0.3s ease;
+  transition         : all 0.3s ease;
+}
+
+#return-to-top:hover {
+  background : rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+  top   : 5px;
+  color : #fff;
+}
+
 /* —— FOOTER */
 
 footer {
