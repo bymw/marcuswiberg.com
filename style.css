@@ -267,7 +267,6 @@ main {
 #return-to-top {
   z-index               : 1;
   display               : none;
-  display               : block;
   position              : fixed;
   right                 : 20px;
   bottom                : 20px;
@@ -276,7 +275,6 @@ main {
   -moz-border-radius    : 35px;
   -webkit-border-radius : 35px;
   border-radius         : 35px;
-  background            : rgb(0, 0, 0);
   background            : rgba(0, 0, 0, 0.7);
   text-decoration       : none;
   -moz-transition       : all 0.3s ease;
