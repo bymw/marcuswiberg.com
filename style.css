@@ -222,11 +222,6 @@ main {
   background-position : center;
 }
 
-.mw.by2 {
-  background-image    : url(img/sm/bg/7T5C5867-s.jpg);
-  background-position : center;
-}
-
 .mw.by3 {
   background-image    : url(img/sp/bg/876543-s.jpg);
   background-position : center;
@@ -249,11 +244,6 @@ main {
 
 .mw img {
   margin : 40% 0 0;
-}
-
-.mw .wide {
-  width     : 92%;
-  max-width : 960px;
 }
 
 .therm .full {
