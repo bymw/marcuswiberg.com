@@ -208,10 +208,10 @@ main {
 }
 
 .yay {
+  max-height          : 550px;
+  background-repeat   : no-repeat;
   background-position : center;
-  background-repeat : no-repeat;
-  max-height: 550px;
-  object-fit: cover;
+  object-fit          : cover;
 }
 
 .resps img {
