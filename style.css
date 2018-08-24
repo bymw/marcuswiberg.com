@@ -214,10 +214,6 @@ main {
   object-fit          : cover;
 }
 
-.resps img {
-  margin : 40% 0 0;
-}
-
 .therm .full {
   display             : flex;
   background          : #020202;
