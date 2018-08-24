@@ -242,6 +242,11 @@ main {
   background-position : center;
 }
 
+.mw.by6 {
+  background-image    : url(img/mm/bg/8765435-s.jpg);
+  background-position : center;
+}
+
 .mw img {
   margin : 40% 0 0;
 }
