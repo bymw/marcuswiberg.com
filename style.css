@@ -207,42 +207,14 @@ main {
   background : #fff;
 }
 
-.mw {
+.yay {
+  background-position : center;
   background-repeat : no-repeat;
-  background-size   : cover;
+  max-height: 550px;
+  object-fit: cover;
 }
 
-.mw.by {
-  background-image    : url(img/sm/bg/7T5C5861-s.jpg);
-  background-position : center;
-}
-
-.mw.by1 {
-  background-image    : url(img/sm/bg/7T5C4083-s.jpg);
-  background-position : center;
-}
-
-.mw.by3 {
-  background-image    : url(img/sp/bg/876543-s.jpg);
-  background-position : center;
-}
-
-.mw.by4 {
-  background-image    : url(img/sp/bg/45678-s.jpg);
-  background-position : center;
-}
-
-.mw.by5 {
-  background-image    : url(img/ai/bg/456789-s.jpg);
-  background-position : center;
-}
-
-.mw.by6 {
-  background-image    : url(img/mm/bg/8765435-s.jpg);
-  background-position : center;
-}
-
-.mw img {
+.resps img {
   margin : 40% 0 0;
 }
 
@@ -320,7 +292,7 @@ footer a[href]:hover {
   screen
   and (min-width : 800px)
   and (max-width : 960px) {
-  .mw img {
+  .resp img {
     margin : 370px 0 0;
   }
 }
@@ -328,7 +300,7 @@ footer a[href]:hover {
 @media
   screen
   and (max-width : 800px) {
-  .mw img {
+  .resp img {
     margin : 320px 0 0;
   }
 }
