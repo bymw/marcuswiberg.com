@@ -107,7 +107,6 @@ main {
 /* —— PAGE */
 
 .page {
-  padding         : 0 20px 20px;
   background      : #eee;
   justify-content : center;
 }
