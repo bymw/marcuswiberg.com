@@ -1,9 +1,9 @@
 <?php
 
   if ($_POST) {
-    $toEmail = 'masterov.mixail@gmail.com';
+    $toEmail = 'hi@marcuswiberg.com';
     $values = [];
-    
+
     if ($_POST['name']) {
       $subject = 'Contact Request From ' . htmlspecialchars($_POST['name']);
     } else {
@@ -23,7 +23,7 @@
     $body = implode('<br>', $values);
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-Type:text/html;charset=UTF-8" . "\r\n";
-    
+
     if ($_POST['name'] || $_POST['email']) {
       $headers .= "From: ";
     }
