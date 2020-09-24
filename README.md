@@ -1,2 +1,2 @@
-# bymw.github.io
+# www.marcuswiberg.com
 Personal website.
