@@ -8,11 +8,6 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://marcuswiberg.com/index.html</loc>
-    <lastmod>2020-10-09T08:20:12+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://marcuswiberg.com/projects.html</loc>
     <lastmod>2020-10-09T08:20:12+00:00</lastmod>
     <priority>0.80</priority>
