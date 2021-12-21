@@ -1,3 +1,3 @@
 # marcuswiberg.com
-Personal Website. 
-Always INP
+Personal Website.
+Always WIP
