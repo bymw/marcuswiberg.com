@@ -76,6 +76,52 @@
 }
 
 /*--------------------------------------------------
+	Fun stuff
+---------------------------------------------------*/
+
+.mytitle {
+  flex-shrink: 0;
+  height: auto; /* 284px */
+  max-width: 100%;
+  position: relative;
+  font-weight: 700;
+  font-style: normal;
+  color: #FFFFFF;
+  font-size: 4vmax;
+  letter-spacing: -0.7px;
+  line-height: 1.5;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.mysubtitle {
+  flex-shrink: 0;
+  height: auto; /* 284px */
+  padding-left: 45px;
+  padding-top: 4px;
+  max-width: 100%;
+  position: relative;
+  font-weight: 500;
+  font-style: normal;
+  color: #FFFFFF;
+  letter-spacing: -0.7px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.myimg {
+float: left;
+}
+
+@media (max-width: 549px) {
+        .mysubtitle {
+            padding-top: 0;
+            bottom: 5px;
+        }
+      }
+
+
+/*--------------------------------------------------
 	02. Reveal animations
 ---------------------------------------------------*/
 [data-anim-wrap] {
