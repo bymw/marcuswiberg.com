@@ -76,8 +76,8 @@ window.onload = function () {
   if (App.config.cursorFollower.enabled) {
     Cursor.init();
   }
-  
-  if (App.config.ajax.enabled) {
+
+  if (App.config.ajax.false) {
 		PJAX.init();
 	}
 
@@ -100,15 +100,15 @@ function initComponents() {
   scrollToIdInit();
   parallaxInit();
   contactForm();
-  
+
   mainSlider1Init();
   mainSlider2Init();
   MainSlider3.init();
   sectionSlidersInit();
-  
+
   masonryFilterInit();
   masonryGridInit();
-  
+
   feather.replace();
   videoBtn();
 
@@ -152,7 +152,7 @@ const Preloader = (function() {
           document.documentElement.classList.remove('html-overflow-hidden');
           return tl;
         }
-        
+
         return tl
           .fromTo(progressInner, {
             scaleY: 0,
@@ -191,13 +191,13 @@ const Preloader = (function() {
     gsap.registerEffect({
       name: 'preloaderShow',
       effect: (target, config) => {
-    
+
         const tl = gsap.timeline();
 
         if (!preloader) {
           return tl;
         }
-    
+
         tl
           .set(progress, {
             opacity: 0,
@@ -206,7 +206,7 @@ const Preloader = (function() {
           .set(progressInner, {
             scaleY: 0,
           })
-    
+
           .to(bg, {
             ease: 'quart.inOut',
             duration: 0.6,
@@ -228,22 +228,22 @@ const Preloader = (function() {
             duration: 1,
             ease: 'none',
           }, '>-0.3')
-    
-    
+
+
         return tl;
-    
+
       },
       extendTimeline: true,
     });
 
   }
-  
+
   function hide() {
 
     gsap.registerEffect({
       name: 'preloaderHide',
       effect: (target, config) => {
-    
+
         const tl = gsap.timeline();
 
         return tl
@@ -267,7 +267,7 @@ const Preloader = (function() {
               document.body.classList.remove('overflow-hidden');
             },
           }, '>-0.5')
-    
+
       },
       extendTimeline: true,
     });
@@ -301,7 +301,7 @@ const Header = (function() {
   let navList;
   let navListLinks;
   let navInfoItems;
-  
+
   let navBtnOpen;
   let navBtnClose;
   let navBack;
@@ -323,7 +323,7 @@ const Header = (function() {
     menuDeepLevel = 0;
   }
 
-  
+
   function init() {
 
     updateVars();
@@ -374,7 +374,7 @@ const Header = (function() {
       deepLevelCheck(menuDeepLevel);
       menuListStepAnimate(visibleList, parentList);
     });
-    
+
     listItems.forEach(el => {
       const parentLink = el.querySelector('li > a');
       parentLink.removeAttribute('href');
@@ -395,11 +395,11 @@ const Header = (function() {
   function menuListStepAnimate(hideList, showList) {
 
     const navBtnClose = document.querySelector('.js-nav-close');
-    
+
     let hideListItems = hideList.children;
     hideListItems = Array.from(hideListItems);
     const hideListLinks = hideListItems.map(item => item.querySelector('li > a'));
-    
+
     let showListItems = showList.children;
     showListItems = Array.from(showListItems);
     const showListLinks = showListItems.map(item => item.querySelector('li > a'));
@@ -548,18 +548,18 @@ const Header = (function() {
   function classicMenuInit() {
 
     const target = document.querySelectorAll('.js-navClassic-list .menu-item-has-children');
-  
+
     if (!target.length) return;
-  
+
     const header = document.querySelector('.header');
     let dropDownTheme;
-  
+
     if (header.classList.contains('js-header-dark')) {
       dropDownTheme = 'dark';
     } else {
       dropDownTheme = 'light';
     }
-  
+
     target.forEach(el => {
       let subnav = el.children;
       let where = 'bottom';
@@ -571,7 +571,7 @@ const Header = (function() {
       ) {
         where = 'right';
       }
-      
+
       tippy(el, {
         interactive: true,
         content: subnav,
@@ -579,10 +579,10 @@ const Header = (function() {
         placement: where,
         offset: [40, 0],
         delay: [null, 200],
-  
+
         theme: dropDownTheme,
         animation: 'shift',
-  
+
         popperOptions: {
           modifiers: [
             {
@@ -601,21 +601,21 @@ const Header = (function() {
         },
       });
     });
-  
+
   }
-  
+
   function headerSticky() {
-  
+
     const header = document.querySelector('.js-header');
-  
+
     if (!header) return;
-  
+
     new ScrollMagic.Scene({
       offset: '2px',
     })
       .setClassToggle(header, 'is-sticky')
       .addTo(App.SMcontroller);
-  
+
   }
 
 
@@ -645,7 +645,7 @@ function pageRevealEffects() {
         opacity: 1,
         y: '0%',
       })
-  
+
     },
     extendTimeline: true,
     defaults: {
@@ -694,7 +694,7 @@ function pageRevealEffects() {
         y: '0px',
         opacity: 1,
       })
-  
+
     },
     extendTimeline: true,
     defaults: {
@@ -718,7 +718,7 @@ function pageRevealEffects() {
         scale: 1,
         opacity: 1,
       })
-  
+
     },
     extendTimeline: true,
   });
@@ -750,7 +750,7 @@ const PageReveal = (function() {
       ease: 'quart.out',
       y: '0%',
     };
-    
+
     const textButton = {
       stagger: 0.1,
       duration: 1,
@@ -948,7 +948,7 @@ const PageReveal = (function() {
         ease: 'quart.inOut',
         scale: 1,
       }, '>-0.8')
-      
+
       .to(subtitle, {
         stagger: 0.1,
         duration: 1.0,
@@ -988,7 +988,7 @@ const PageReveal = (function() {
     const subtitle = masthead.querySelectorAll('.js-subtitle .split__line');
     const title = masthead.querySelectorAll('.js-title .split__line');
     const infoItems = masthead.querySelectorAll('.js-info-item .split__line');
-    
+
 
     const splitBase = {
       stagger: 0.1,
@@ -1044,7 +1044,7 @@ const PageReveal = (function() {
         .to(subtitle, splitBase, '>-0.6')
         .to(title, splitBase, '>-0.8')
         .to(infoItems, splitInfoItems, '>-0.8')
-        
+
     }
 
   }
@@ -1054,7 +1054,7 @@ const PageReveal = (function() {
     if (!document.querySelector('.js-masthead-blog-article')) {
       return tl;
     }
-    
+
     const masthead = document.querySelector('.js-masthead-blog-article');
     const info = masthead.querySelector('.js-info');
     const title = masthead.querySelector('.js-title');
@@ -1102,7 +1102,7 @@ const PageReveal = (function() {
         scale: 1,
         opacity: 1,
       }, '>-0.1')
-  
+
       .fromTo([subtitle, title, button], {
         opacity: 0,
         y: '35px',
@@ -1213,7 +1213,7 @@ const PageReveal = (function() {
 
 
   function base(tl) {
-    
+
     if (
       document.querySelector('.js-page-header') ||
       document.querySelector('.js-masthead-type-1') ||
@@ -1261,7 +1261,7 @@ const PageReveal = (function() {
     ) {
       RevealAnim.init();
     }
-    
+
     mastheadType_1(tl);
     mastheadType_2(tl);
     mastheadType_3(tl);
@@ -1272,7 +1272,7 @@ const PageReveal = (function() {
     sliderMainType_3(tl);
     mastheadBlogArticle(tl);
     base(tl);
-  
+
     tl.add(() => {
       if (MainSlider3.isActive()) {
         MainSlider3.autoplayStart();
@@ -1380,7 +1380,7 @@ const Cursor = (function() {
     }
 
   }
-  
+
   function leaveHandler({ target }) {
 
     App.body.classList.remove('is-cursor-active');
@@ -1405,7 +1405,7 @@ const Cursor = (function() {
       "[data-cursor-icon]",
       "textarea"
     ]);
-    
+
     cursorTriggers.forEach(el => {
       el.addEventListener("mouseenter", enterHandler);
       el.addEventListener("mouseleave", leaveHandler);
@@ -1416,7 +1416,7 @@ const Cursor = (function() {
   function clear() {
 
     if (!cursor) return;
-    
+
     cursorTriggers.forEach(el => {
       el.removeEventListener("mouseenter", enterHandler);
       el.removeEventListener("mouseleave", leaveHandler);
@@ -1490,14 +1490,14 @@ const RevealAnim = (function() {
   function single() {
 
     const animationTarget = document.querySelectorAll('[data-anim]');
-  
+
     if (!animationTarget.length) {
       return;
     }
-    
+
     for (let i = 0; i < animationTarget.length; i++) {
       const el = animationTarget[i];
-    
+
       new ScrollMagic.Scene({
         offset: '160px',
         triggerElement: el,
@@ -1509,20 +1509,20 @@ const RevealAnim = (function() {
       })
       .addTo(App.SMcontroller)
     }
-  
+
   }
-  
+
   function container() {
-  
+
     const animationContainer = document.querySelectorAll('[data-anim-wrap]');
-  
+
     if (!animationContainer.length) {
       return;
     }
-    
+
     for (let i = 0; i < animationContainer.length; i++) {
       const el = animationContainer[i];
-    
+
       new ScrollMagic.Scene({
         offset: '160px',
         triggerElement: el,
@@ -1530,35 +1530,35 @@ const RevealAnim = (function() {
         reverse: false,
       })
       .on('enter', function (event) {
-        
+
         const animChilds = el.querySelectorAll('[data-anim-child]');
         el.classList.add('animated');
         animChilds.forEach(el => animateElement(el));
-        
+
       })
       .addTo(App.SMcontroller)
     }
-  
+
   }
-  
+
 
   function animateElement(target) {
-    
+
     let attrVal;
     let animDelay;
     let attrDelayPart;
-  
+
     if (target.getAttribute('data-anim')) {
       attrVal = target.getAttribute('data-anim');
     } else {
       attrVal = target.getAttribute('data-anim-child');
     }
-    
+
     if (attrVal.includes('delay-')) {
       attrDelayPart = attrVal.split(' ').pop();
       animDelay = attrDelayPart.substr(attrDelayPart.indexOf('-') + 1) / 10;
     }
-  
+
     if (attrVal.includes('counter')) {
       counter(target, animDelay);
     }
@@ -1578,13 +1578,13 @@ const RevealAnim = (function() {
   }
 
   function pieChart(target, animDelay = 0) {
-  
+
     const counterVal = target.getAttribute('data-percent');
     const chartBar = target.querySelector('.pieChart-bar');
-    
+
     if (counterVal < 0) { counterVal = 0;}
     if (counterVal > 100) { counterVal = 100;}
-    
+
     gsap.fromTo(chartBar, {
       drawSVG: `0%`,
     }, {
@@ -1592,33 +1592,33 @@ const RevealAnim = (function() {
       duration: 1.4,
       ease: 'power3.inOut',
       drawSVG: `${counterVal}%`,
-  
+
       onStart: () => {
         chartBar.classList.remove('bar-stroke-hidden');
       }
     });
-  
-  
+
+
     let object = { count: 0 };
     const barPercent = target.querySelector('.pieChart-percent');
-  
+
     gsap.to(object, {
       count: counterVal,
       delay: 0.45 + animDelay,
       duration: 1,
       ease: 'power3.inOut',
-      
+
       onUpdate: function() {
         barPercent.innerHTML = Math.round(object.count) + '%';
       },
     });
-  
+
   }
-  
+
   function lineChart(target, animDelay = 0) {
-  
+
     const counterVal = target.getAttribute('data-percent');
-  
+
     gsap.fromTo(target.querySelector('.js-bar'), {
       scaleX: 0,
     }, {
@@ -1627,53 +1627,53 @@ const RevealAnim = (function() {
       ease: 'power3.inOut',
       scaleX: counterVal / 100,
     })
-  
-  
+
+
     let object = { count: 0 };
     const barPercent = target.querySelector('.js-number');
-  
+
     gsap.to(object, {
       count: counterVal,
       delay: 0.45 + animDelay,
       duration: 1,
       ease: 'power3.inOut',
-      
+
       onUpdate: function() {
         barPercent.innerHTML = Math.round(object.count) + '%';
       },
     });
-  
+
   }
-  
+
   function counter(target, animDelay = 0) {
-  
+
     const counterVal = target.getAttribute('data-counter');
     const counterAdd = target.getAttribute('data-counter-add');
     const totalDelay = animDelay;
     let symbols = '';
-    
+
     let object = { count: 0 };
     const counterNum = target.querySelector('.js-counter-num');
 
     if (counterAdd) {
       symbols = counterAdd;
     }
-  
+
     gsap.to(object, {
       count: counterVal,
       delay: totalDelay,
       duration: 1.8,
       ease: 'power3.inOut',
-      
+
       onUpdate: function() {
         counterNum.innerHTML = Math.round(object.count) + symbols;
       },
     });
-  
+
   }
-  
+
   function splitLines(target, animDelay = 0) {
-  
+
     const lines = target.querySelectorAll('.split__line');
 
     gsap.to(lines, {
@@ -1683,7 +1683,7 @@ const RevealAnim = (function() {
       ease: 'power2.out',
       y: '0%',
     });
-  
+
   }
 
 
@@ -1704,7 +1704,7 @@ const RevealAnim = (function() {
 
 
 function splitTextIntoLines() {
-  
+
   let target;
 
   if (App.body.classList.contains('page-reveal-off')) {
@@ -1773,7 +1773,7 @@ function mainSlider1Init() {
         parallax: false,
       },
     },
-  
+
     navigation: {
       prevEl: nav.querySelector('.js-prev'),
       nextEl: nav.querySelector('.js-next'),
@@ -1793,7 +1793,7 @@ function mainSlider2Init() {
     spaceBetween: 0,
     speed: 600,
     parallax: true,
-    
+
     loop: true,
     slidesPerView: 3,
     centeredSlides: true,
@@ -1994,7 +1994,7 @@ function sectionSlidersInit() {
 
   for (let i = 0; i < sectionSlider.length; i++) {
     const el = sectionSlider[i];
-    
+
     let gap = 0;
     let loop = false;
     let centered = false;
@@ -2037,7 +2037,7 @@ function sectionSlidersInit() {
       parallax: true,
 
       loop: loop,
-      
+
       lazy: {
         loadPrevNext: true,
       },
@@ -2068,13 +2068,13 @@ function sectionSlidersInit() {
 function contactForm() {
 
   const form = document.querySelector(".js-ajax-form");
-  
+
   if (!form) {
     return;
   }
 
   const formAlert = form.querySelector('.js-ajax-form-alert');
-  
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -2097,9 +2097,9 @@ function contactForm() {
 
     for (let i = 0; i < inputGroups.length; i++) {
       const el = inputGroups[i];
-      
+
       let field;
-      
+
       if (el.querySelector('input')) {
         field = el.querySelector('input');
       } else if (el.querySelector('textarea')) {
@@ -2110,7 +2110,7 @@ function contactForm() {
       let fieldValue = field.value;
       let errorField = el.querySelector('.form__error');
 
-      
+
       if (field.hasAttribute('data-required') && !fieldValue) {
         field.classList.add('-error');
         validForm = false;
@@ -2118,7 +2118,7 @@ function contactForm() {
         errorField.innerHTML = 'Please fill this field';
         continue;
       }
-    
+
       if (field.getAttribute('name') === 'email') {
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fieldValue)) {
           field.classList.add('-error');
@@ -2128,7 +2128,7 @@ function contactForm() {
           continue;
         }
       }
-    
+
       formData[fieldName] = fieldValue;
     }
 
@@ -2143,7 +2143,7 @@ function contactForm() {
       dataArray.push(`${property}=${formData[property]}`);
       requestData = dataArray.join('&');
     }
-    
+
     request.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         formAlert.classList.add('is-active');
@@ -2194,7 +2194,7 @@ function masonryFilterInit() {
 
 
     const filterButtons = el.querySelectorAll(".filter-button-group button");
-  
+
     for (let i = 0; i < filterButtons.length; i++) {
       const el = filterButtons[i];
 
@@ -2237,14 +2237,14 @@ function masonryGridInit() {
       },
     });
   }
-  
+
 }
 /*--------------------------------------------------
   11. Lazy loading
 ---------------------------------------------------*/
 
 function lazyLoading() {
-  
+
   if (!document.querySelector('.js-lazy')) {
     return;
   }
@@ -2263,7 +2263,7 @@ function parallaxInit() {
   if (!document.querySelector('[data-parallax]')) {
     return;
   }
-  
+
   const target = document.querySelectorAll('[data-parallax]');
 
   target.forEach(el => {
@@ -2295,7 +2295,7 @@ function backButton() {
     } else {
       return 2.2;
     }
-    
+
   }
 
   button.addEventListener('click', () => {
@@ -2385,7 +2385,7 @@ const PJAX = (function() {
 
   function initNewPage(data) {
     return new Promise((resolve) => {
-      
+
       document.body.scrollTop = document.documentElement.scrollTop = 0;
 
       App.SMcontroller.destroy(true);
@@ -2401,10 +2401,10 @@ const PJAX = (function() {
         Cursor.clear();
         Cursor.update();
       }
-      
+
       initComponents();
       resolve(true);
-      
+
     });
   }
 
