@@ -77,7 +77,7 @@ window.onload = function () {
     Cursor.init();
   }
 
-  if (App.config.ajax.false) {
+  if (App.config.ajax.enabled) {
 		PJAX.init();
 	}
 
