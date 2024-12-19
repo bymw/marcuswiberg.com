@@ -1,0 +1,76 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------------------------
+   Keyframes
+-------------------------------------- */
+@keyframes moveGradient {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(200px, 200px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* --------------------------------------
+   Gradient Styles
+-------------------------------------- */
+.gradient {
+  position: absolute;
+  width: 400px !important;
+  height: 400px !important;
+  filter: blur(100%) !important;
+  background: radial-gradient(circle, rgba(255, 99, 71, 0.5), transparent 40%);
+  animation: moveGradient 16s ease-in-out infinite; /* Uniform duration */
+  border-radius: 50%; /* Keeps circular shape */
+  z-index: -1; /* Ensures gradients are behind content */
+}
+
+.gradient:nth-child(2) {
+  background: radial-gradient(circle, rgba(18, 138, 236, 0.5), transparent 30%);
+}
+
+.gradient:nth-child(3) {
+  background: radial-gradient(circle, rgba(255, 104, 252, 0.5), transparent 40%);
+}
+
+/* Keyframes */
+@keyframes moveGradient {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(100px, 100px); /* Adjust as needed for desired movement */
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* --------------------------------------
+   Body Background
+-------------------------------------- */
+body {
+  background:
+    /* Horizontal grid lines */ repeating-linear-gradient(to right, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 0.5px, transparent 0.5px, transparent 100px), /* Vertical grid lines */ repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 0.5px, transparent 0.5px, transparent 100px);
+  background-size: 100px 100px; /* Size of the grid squares */
+  background-attachment: fixed; /* Keeps grid fixed during scroll */
+}
+
+/* --------------------------------------
+   Scrollbar Hiding
+-------------------------------------- */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

@@ -1,738 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- ===========================================================
+       HEAD SECTION
+       Contains meta tags, SEO configurations, icons, styles, and scripts
+    ============================================================ -->
+  <head>
+    <!-- Character encoding and viewport settings for responsiveness -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="I lead teams to create intelligent, AI-driven systems and seamless user experiences." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Marcus Wiberg" />
 
-  <!-- Meta tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta content="Swedish serial entrepreneur & product leader." name="description" />
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Marcus Wiberg - Product and Design Leader" />
+    <meta property="og:description" content="I lead teams to create intelligent, AI-driven systems and seamless user experiences." />
+    <meta property="og:image" content="https://marcuswiberg.com/media/meta/mw.jpg" />
+    <meta property="og:url" content="https://www.marcuswiberg.com/" />
+    <meta property="og:type" content="website" />
 
-  <!-- OG tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:description" content="Swedish serial entrepreneur & product leader." />
-  <meta property="og:image:url" content="https://marcuswiberg.com/img/og/mw.jpg" />
-  <meta property="og:image:height" content="500" />
-  <meta property="og:image:width" content="500" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:url" content="https://marcuswiberg.com" />
-  <meta property="og:title" content="Marcus Wiberg" />
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Marcus Wiberg - Product and Design Leader" />
+    <meta name="twitter:description" content="I lead teams to create intelligent, AI-driven systems and seamless user experiences." />
+    <meta name="twitter:image" content="https://marcuswiberg.com/media/meta/mw.jpg" />
 
-  <!-- Google fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#ffffff" />
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/vendors.css">
-  <link rel="stylesheet" href="css/main.css">
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://www.marcuswiberg.com/" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16" />
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marcus Wiberg",
+        "jobTitle": "Product and Design Leader",
+        "url": "https://www.marcuswiberg.com/",
+        "sameAs": ["https://www.linkedin.com/in/marcuswiberg", "https://x.com/immarcuswiberg", "https://github.com/bymw"],
+        "image": "#",
+        "description": "#"
+      }
+    </script>
 
-  <title>Marcus Wiberg</title>
-</head>
+    <!-- Icons -->
+    <link rel="icon" href="favicons/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
 
-<body
+    <!-- Title -->
+    <title>Marcus Wiberg - Product and Design Leader</title>
 
+    <!-- Styling & JS -->
+    <link rel="stylesheet" href="dist/output.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="bg-[#080808] text-white antialiased min-h-screen">
+    <!-- ===========================================================
+       BACKGROUND GRADIENT ELEMENTS
+       Positioned decorative gradients in the background
+    ============================================================ -->
+    <div class="gradient" style="top: 48%; right: 49%"></div>
+    <div class="gradient" style="top: 47%; right: 44%"></div>
+    <div class="gradient" style="top: 46%; right: 45%"></div>
 
-  <!-- preloader start -->
-  <div class="preloader js-preloader">
-    <div class="preloader__bg"></div>
-
-    <div class="preloader__progress">
-      <div class="preloader__progress__inner"></div>
-    </div>
-  </div>
-  <!-- preloader end -->
-
-
-  <!-- barba container start -->
-  <div class="barba-container" data-barba="container">
-
-    <!-- to-top-button start -->
-    <div data-cursor class="backButton js-backButton">
-      <span class="backButton__bg"></span>
-      <div class="backButton__icon__wrap">
-        <i class="backButton__button js-top-button" data-feather="arrow-up"></i>
-      </div>
-    </div>
-    <!-- to-top-button end -->
-
-
-    <main class="bg-dark-1">
-
-
-      <!-- header start -->
-      <header class="header -dark -sticky-light js-header-light -classic js-header">
-        <!-- header__bar start -->
-        <div class="header__bar">
-          <div>
-            <div class="header__logo js-header-logo">
-              <a data-barba href="index.html" class="footer__logo text-white">Marcus Wiberg</a>
-            </div>
-          </div>
-
-          <div class="navClassic-wrap js-header-menu-classic">
-            <ul class="navClassic-list js-navClassic-list">
-              <li>
-                <b><a data-barba href="index.html">Home</a></b>
-              </li>
-              <li>
-              <a data-barba target="_blank" href="https://www.linkedin.com/in/marcuswiberg/">Linkedin</a>
-              </li>
-              <li>
-              <a data-barba href="about.html">About</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="header__menu__wrap overflow-hidden">
-            <div class="header__menu js-header-menu">
-              <button type="button" class="nav-button-open js-nav-open">
-                <i class="icon" data-feather="menu"></i>
-              </button>
-            </div>
-          </div>
+    <!-- ===========================================================
+       MAIN CONTAINER
+       Houses all primary content sections
+    ============================================================ -->
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <!-- ===========================================================
+         HEADER SECTION
+         Introduction and personal branding
+      ============================================================ -->
+      <header class="text-left pt-16">
+        <!-- Flex container for heading and LinkedIn icon -->
+        <div class="flex items-center">
+          <!-- Main Heading -->
+          <h1 class="text-5xl font-bold">Hi, I'm Marcus</h1>
+          <!-- LinkedIn Icon with Link -->
+          <a href="https://www.linkedin.com/in/marcuswiberg/" target="_blank" rel="noopener noreferrer" class="ml-4 transform transition-transform duration-300 hover:scale-110" aria-label="LinkedIn">
+            <!-- LinkedIn SVG Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" class="w-6 h-6">
+              <g fill="none" fill-rule="evenodd">
+                <!-- LinkedIn Background Shape -->
+                <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" fill="#007EBB" />
+                <!-- LinkedIn Logo -->
+                <path
+                  d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"
+                  fill="#FFF" />
+              </g>
+            </svg>
+          </a>
         </div>
-        <!-- header__bar end -->
 
+        <!-- Subheading with Gradient Text -->
+        <p class="mt-6 text-4xl max-w-4xl">
+          I lead teams to create intelligent,
+          <span class="bg-gradient-to-r from-rose-400 to-red-500 font-bold text-transparent bg-clip-text">AI-driven</span>
+          systems and seamless user experiences.
+        </p>
 
-        <!-- nav start -->
-        <nav class="nav js-nav">
-          <div class="nav__inner js-nav-inner">
-            <div class="nav__bg js-nav-bg"></div>
-
-            <div class="nav__container">
-              <div class="nav__header">
-                <button type="button" class="nav-button-back js-nav-back">
-                  <i class="icon" data-feather="arrow-left-circle"></i>
-                </button>
-
-                <button type="button" class="nav-btn-close js-nav-close pointer-events-none">
-                  <i class="icon" data-feather="x"></i>
-                </button>
-              </div>
-
-              <div class="nav__content">
-                <div class="nav__content__left">
-                  <div class="navList__wrap">
-                    <ul class="navList js-navList">
-                      <li>
-                        <a data-barba href="index.html">
-                          Home
-                        </a>
-                      </li>
-                      <li>
-                        <a data-barba target="_blank" href="https://www.linkedin.com/in/marcuswiberg/">
-                          Linkedin
-                        </a>
-                      </li>
-
-                      <li class="menu-item-has-children">
-                        <a>Startups</a>
-
-                        <ul class="subnav-list">
-                          <li>
-                            <a data-barba href="martha-stewart-marleyspoon.html">Marley Spoon</a>
-                          </li>
-                          <li>
-                            <a data-barba href="snapsound.html">SnapSound</a>
-                          </li>
-                          <li>
-                            <a data-barba href="livingpackets.html">LivingPackets</a>
-                          </li>
-                          <li>
-                            <a data-barba href="mika.html">Mika</a>
-                          </li>
-                          <li>
-                            <a data-barba href="matmatch.html">Matmatch</a>
-                          </li>
-                          <li>
-                            <a data-barba href="switchplace.html">Switchplace</a>
-                          </li>
-                          <li>
-                            <a data-barba href="socialmist.html">Socialmist</a>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li>
-                        <a data-barba href="about.html">
-                          About
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="nav__content__right">
-                  <div class="nav__info">
-                    <div class="nav__info__item js-navInfo-item">
-                      <h5 class="text-sm tracking-none fw-500">
-                        Socials
-                      </h5>
-
-                      <div class="nav__info__content text-lg text-white mt-16">
-                        <a href="https://www.linkedin.com/in/marcuswiberg/">Linkedin</a>
-                        <a href="https://vimeo.com/bymw">Vimeo</a>
-
-                      </div>
-                    </div>
-
-                    <div class="nav__info__item js-navInfo-item">
-                      <h5 class="text-sm tracking-none fw-500">
-                        Contact
-                      </h5>
-
-                      <div class="nav__info__content text-lg text-white mt-16">
-                        <a href="mailto:hi@marcuswiberg.com">hi@marcuswiberg.com</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-        <!-- nav end -->
+        <!-- Location Information with Icon -->
+        <div class="mt-6 flex items-center space-x-2 text-lg text-neutral-400">
+          <!-- Location Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-gray-400">
+            <path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+          </svg>
+          <!-- Location Text -->
+          <p> Currently in <span class="font-bold">Berlin, Germany</span> </p>
+        </div>
       </header>
-      <!-- header end -->
 
-      <!-- section start -->
-      <section class="masthead -type-1 bg-dark-1 js-masthead-type-1 js-shapes">
-        <!-- container start -->
-        <div data-anim-wrap class="container">
+      <!-- ===========================================================
+         MAIN SECTION
+         Contains work experience, certifications, and featured products
+      ============================================================ -->
+      <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 -mt-24 gap-4 sm:gap-8">
+        <!-- Marley Spoon -->
+        <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <!-- Flag Overlay -->
+          <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
+            <img src="media/flags/eu.svg" alt="Europe Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+            <img src="media/flags/us.svg" alt="USA Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+            <img src="media/flags/au.svg" alt="Australia Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+          </div>
 
-          <!-- row start -->
-          <div data-anim-child="slide-up delay-1" class="mytitle">Marcus Wiberg is a Swedish entrepreneur crafting systems and experiences in Berlin, Germany.
-          </div>
-          <div>
-            <img data-anim-child="slide-up delay-1" class="myimg" height="35px" width"35px" src="img/marleyspoon/brand/ms.png">
-          </img>
-          </div>
-          <div data-anim-child="slide-up delay-1" class="mysubtitle">Currently Head of Product & Design at
-            <a target="_blank" href="https://marleyspoon.com">Marley Spoon</a> and
-            <a target="_blank" href="https://dinnerly.com">Dinnerly</a>
-            </div>
-          </div>
-        <!-- row end -->
-        <!-- container end -->
-        <!-- ui-element start -->
-        <div class="ui-element -bottom-left sm:d-none js-ui">
-          <button type="button" class="ui-element__scroll text-white js-ui-scroll-button">
-            scroll down
-            <i class="icon" data-feather="arrow-down"></i>
-          </button>
-        </div>
-        <!-- ui-element end -->
-
-        <!-- ui-element start -->
-        <div class="ui-element -bottom-right js-ui">
-          <div class="ui-element__social text-white js-bottom-left-links">
-            <a target="_blank" href="https://www.linkedin.com/in/marcuswiberg/"><i class="fa fa-linkedin"></i></a>
-            <a target="_blank" href="https://vimeo.com/bymw"><i class="fa fa-vimeo"></i></a>
+          <!-- Card Content -->
+          <div class="relative z-10 transition duration-300">
+            <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Head of Product & Design</span>
+            <h2 class="mt-4 text-xl font-bold">Marley Spoon</h2>
+            <p class="mt-2 text-neutral-400">Leading meal-kit e-commerce platforms serving USA, Australia, and Europe.</p>
           </div>
         </div>
-        <!-- ui-element end -->
 
+        <!-- MW Ventures -->
+        <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <!-- Flag Overlay -->
+          <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
+            <img src="media/flags/de.svg" alt="Germany Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+            <img src="media/flags/se.svg" alt="Sweden Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+          </div>
+
+          <!-- Card Content -->
+          <div class="relative z-10 transition duration-300">
+            <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Founder</span>
+            <h2 class="mt-4 text-xl font-bold">MW Ventures</h2>
+            <p class="mt-2 text-neutral-400">Product development agency focused on hardware, web and native app development.</p>
+          </div>
+        </div>
+
+        <!-- LivingPackets -->
+        <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <!-- Flag Overlay -->
+          <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
+            <img src="media/flags/de.svg" alt="Germany Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+            <img src="media/flags/fr.svg" alt="France Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+          </div>
+
+          <!-- Card Content -->
+          <div class="relative z-10 transition duration-300">
+            <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Product Lead</span>
+            <h2 class="mt-4 text-xl font-bold">LivingPackets</h2>
+            <p class="mt-2 text-neutral-400">Green, smart, and secure delivery and packaging solutions for e-commerce.</p>
+          </div>
+        </div>
+
+        <!-- Mika -->
+        <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <!-- Flag Overlay -->
+          <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
+            <img src="media/flags/de.svg" alt="Germany Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+          </div>
+
+          <!-- Card Content -->
+          <div class="relative z-10 transition duration-300">
+            <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Head of Product</span>
+            <h2 class="mt-4 text-xl font-bold">Mika</h2>
+            <p class="mt-2 text-neutral-400">Clinically validated digital therapeutic for all cancer patients.</p>
+          </div>
+        </div>
+
+        <!-- Matmatch -->
+        <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <!-- Flag Overlay -->
+          <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
+            <img src="media/flags/de.svg" alt="Germany Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+          </div>
+
+          <!-- Card Content -->
+          <div class="relative z-10 transition duration-300">
+            <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Head of Product</span>
+            <h2 class="mt-4 text-xl font-bold">Matmatch</h2>
+            <p class="mt-2 text-neutral-400">Matmatch is a comprehensive materials search platform.</p>
+          </div>
+        </div>
+
+        <!-- Switchplace -->
+        <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <!-- Flag Overlay -->
+          <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
+            <img src="media/flags/se.svg" alt="Sweden Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+          </div>
+
+          <!-- Card Content -->
+          <div class="relative z-10 transition duration-300">
+            <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Founder & CEO</span>
+            <h2 class="mt-4 text-xl font-bold">Switchplace</h2>
+            <p class="mt-2 text-neutral-400">Real-estate platform for the swapping market.</p>
+          </div>
+        </div>
+
+        <!-- Socialmist -->
+        <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <!-- Flag Overlay -->
+          <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
+            <img src="media/flags/se.svg" alt="Sweden Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+            <img src="media/flags/us.svg" alt="USA Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+            <img src="media/flags/pl.svg" alt="Poland Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" />
+          </div>
+
+          <!-- Card Content -->
+          <div class="relative z-10 transition duration-300">
+            <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Founder & CEO</span>
+            <h2 class="mt-4 text-xl font-bold">Socialmist</h2>
+            <p class="mt-2 text-neutral-400">Social media platform where users can share texts, photos, and videos.</p>
+          </div>
+        </div>
+      </main>
+
+      <!-- ===========================================================
+         CERTIFICATIONS SECTION
+         Lists certifications with links to credentials
+      ============================================================ -->
+      <section>
+        <h2 class="text-xl font-bold text-neutral-300 mb-4">Certifications</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Certification: Introduction to Artificial Intelligence (AI) -->
+          <div class="p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
+            <h3 class="text-base font-semibold text-white"> Introduction to Artificial Intelligence (AI) </h3>
+            <p>IBM</p>
+            <a href="https://www.coursera.org/account/accomplishments/verify/2PJ5N7XDCRL7?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-blue-400 hover:underline"> Show credential ↗ </a>
+          </div>
+          <!-- Certification: Introduction to Psychology -->
+          <div class="p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
+            <h3 class="text-base font-semibold text-white"> Introduction to Psychology </h3>
+            <p>Yale University</p>
+            <a href="https://www.coursera.org/account/accomplishments/verify/C6V82VLVEAJ2?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-blue-400 hover:underline"> Show credential ↗ </a>
+          </div>
+          <!-- Certification: Agile Project Management -->
+          <div class="p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
+            <h3 class="text-base font-semibold text-white"> Agile Project Management </h3>
+            <p>Google</p>
+            <a href="https://www.coursera.org/account/accomplishments/verify/BCACDXN3BX5B?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-blue-400 hover:underline"> Show credential ↗ </a>
+          </div>
+          <!-- Certification: Introduction to Blockchain Technologies -->
+          <div class="p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
+            <h3 class="text-base font-semibold text-white"> Introduction to Blockchain Technologies </h3>
+            <p>Insead</p>
+            <a href="https://www.coursera.org/account/accomplishments/verify/RKFYQQ9QFKKC?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-blue-400 hover:underline"> Show credential ↗ </a>
+          </div>
+        </div>
       </section>
-      <!-- section end -->
-      <!-- section start -->
-      <section class="layout-pt-lg layout-pb-md">
-        <!-- container start -->
-        <div class="container">
-          <!-- row start -->
-          <div class="row justify-content-between align-items-end">
-            <div class="col-lg-6">
-              <div class="sectionHeading -md">
-                <p class="sectionHeading__subtitle -light">Startups</p>
-                <h2 class="sectionHeading__title text-white">Selected Startups</h2>
-              </div>
-            </div>
-
-            <div class="col-auto md:mt-24">
-              <a href="projects.html">
-                <button class="button -md -white text-black">
-                  View Startups
-                </button>
-              </a>
-            </div>
-          </div>
-          <!-- row end -->
-        </div>
-        <!-- container end -->
-      </section>
-      <!-- section end -->
-
-      <!-- section start -->
-      <section class="layout-pt-xs layout-pb-md">
-        <!-- row start -->
-        <div class="fancy-grid -col-3 -container">
-
-          <div class="fancy-grid__item">
-            <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba href="snapsound.html">
-              <div class="portfolioCard__img">
-                <div class="portfolioCard__img__inner">
-                  <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/thumbs/vertical/1.webp"></div>
-                </div>
-              </div>
-
-              <div class="portfolioCard__content pt-24">
-                <div data-split="lines" data-anim-child="split-lines delay-6">
-                  <p class="portfolioCard__category leading-md text-white">
-                    SnapSound
-                  </p>
-                </div>
-
-                <div data-split="lines" data-anim-child="split-lines delay-8">
-                  <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8 text-white">
-                    Music Video Editor
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="fancy-grid__item">
-            <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba href="livingpackets.html">
-              <div class="portfolioCard__img">
-                <div class="portfolioCard__img__inner">
-                  <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/thumbs/vertical/6.webp"></div>
-                </div>
-              </div>
-
-              <div class="portfolioCard__content pt-24">
-                <div data-split="lines" data-anim-child="split-lines delay-6">
-                  <p class="portfolioCard__category leading-md text-white">
-                    LivingPackets
-                  </p>
-                </div>
-
-                <div data-split="lines" data-anim-child="split-lines delay-8">
-                  <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8 text-white">
-                    Sustainable packaging
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="fancy-grid__item">
-            <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba href="mika.html">
-              <div class="portfolioCard__img">
-                <div class="portfolioCard__img__inner">
-                  <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/thumbs/vertical/5.webp"></div>
-                </div>
-              </div>
-
-              <div class="portfolioCard__content pt-24">
-                <div data-split="lines" data-anim-child="split-lines delay-6">
-                  <p class="portfolioCard__category leading-md text-white">
-                    Mika
-                  </p>
-                </div>
-
-                <div data-split="lines" data-anim-child="split-lines delay-8">
-                  <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8 text-white">
-                    Personalized Cancer Therapy
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="fancy-grid__item">
-            <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba href="matmatch.html">
-              <div class="portfolioCard__img">
-                <div class="portfolioCard__img__inner">
-                  <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/thumbs/vertical/2.webp"></div>
-                </div>
-              </div>
-
-              <div class="portfolioCard__content pt-24">
-                <div data-split="lines" data-anim-child="split-lines delay-6">
-                  <p class="portfolioCard__category leading-md text-white">
-                    Matmatch
-                  </p>
-                </div>
-
-                <div data-split="lines" data-anim-child="split-lines delay-8">
-                  <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8 text-white">
-                    Materials Search Engine
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="fancy-grid__item">
-            <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba href="switchplace.html">
-              <div class="portfolioCard__img">
-                <div class="portfolioCard__img__inner">
-                  <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/thumbs/vertical/4.webp"></div>
-                </div>
-              </div>
-
-              <div class="portfolioCard__content pt-24">
-                <div data-split="lines" data-anim-child="split-lines delay-6">
-                  <p class="portfolioCard__category leading-md text-white">
-                    Switchplace
-                  </p>
-                </div>
-
-                <div data-split="lines" data-anim-child="split-lines delay-8">
-                  <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8 text-white">
-                    Proptech Platform
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="fancy-grid__item">
-            <a data-cursor-icon="arrow-right" data-anim-wrap class="portfolioCard -type-1 -hover" data-barba href="socialmist.html">
-              <div class="portfolioCard__img">
-                <div class="portfolioCard__img__inner">
-                  <div class="ratio ratio-3:4 bg-image js-lazy" data-bg="img/thumbs/vertical/3.webp"></div>
-                </div>
-              </div>
-
-              <div class="portfolioCard__content pt-24">
-                <div data-split="lines" data-anim-child="split-lines delay-6">
-                  <p class="portfolioCard__category leading-md text-white">
-                    Socialmist
-                  </p>
-                </div>
-
-                <div data-split="lines" data-anim-child="split-lines delay-8">
-                  <h3 class="portfolioCard__title leading-md fw-500 text-2xl mt-8 text-white">
-                    Social Network With Music
-                  </h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-        </div>
-        <!-- row end -->
-      </section>
-      <!-- section end -->
-
-
-      <!-- section start -->
-      <section class="layout-pt-md layout-pb-md">
-        <!-- container start -->
-        <div data-anim-wrap class="container">
-
-          <!-- row start -->
-          <div class="row">
-            <div class="col-md-5">
-              <div class="sectionHeading -md">
-                <p class="sectionHeading__subtitle text-white">
-                  recognition
-                </p>
-                <h2 class="sectionHeading__title text-white">
-                  Recognition & Certifications
-                </h2>
-              </div>
-            </div>
-          </div>
-          <!-- row end -->
-
-          <div class="row x-gap-48 y-gap-48 layout-pt-md">
-
-            <div class="col-lg-4 col-sm-6">
-              <div data-anim="slide-up delay-1">
-                <h4 class="text-xl fw-500 tracking-none text-white">
-                  Introduction to Psychology
-                </h4>
-                <p class="text-light fw-400 mt-8">
-                  <a target="_blank" href="https://coursera.org/share/1e9eccca0b91e950967aea48c3a18557">By Yale University</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-              <div data-anim="slide-up delay-1">
-                <h4 class="text-xl fw-500 tracking-none text-white">
-                  Agile Project Management
-                </h4>
-                <p class="text-light fw-400 mt-8">
-                  <a target="_blank" href="https://coursera.org/share/d26718ecdeac51146f8daf17518702aa">By Google</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-              <div data-anim="slide-up delay-1">
-                <h4 class="text-xl fw-500 tracking-none text-white">
-                  Introduction to Artificial Intelligence
-                </h4>
-                <p class="text-light fw-400 mt-8">
-                  <a target="_blank" href="https://coursera.org/share/a5ddcd025900e75b20914a57077634b5">By IBM</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-              <div data-anim="slide-up delay-1">
-                <h4 class="text-xl fw-500 tracking-none text-white">
-                  Economics for Executives
-                </h4>
-                <p class="text-light fw-400 mt-8">
-                  <a target="_blank" href="https://executivepeople.se/">By Executive People</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-              <div data-anim="slide-up delay-1">
-                <h4 class="text-xl fw-500 tracking-none text-white">
-                  Board of Directors
-                </h4>
-                <p class="text-light fw-400 mt-8">
-                  <a target="_blank" href="https://executivepeople.se/">By Executive People</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-              <div data-anim="slide-up delay-1">
-                <h4 class="text-xl fw-500 tracking-none text-white">
-                  Advanced Google Analytics
-                </h4>
-                <p class="text-light fw-400 mt-8">
-                  <a target="_blank" href="https://analytics.google.com/analytics/academy/certificate/HxxX5jbkTdeNaKWS4Zspdw">By Google</a>
-                </p>
-              </div>
-            </div>
-
-          </div>
-          <!-- row end -->
-
-        </div>
-        <!-- container end -->
-      </section>
-      <!-- section end -->
-
-      <!-- section start -->
-      <section class="layout-pt-xl layout-pb-lg">
-        <!-- container start -->
-        <div class="container">
-          <div class="overflow-hidden js-section-slider" data-slider-col="base-1 lg-1 md-1 sm-1" data-pagination data-loop>
-
-            <div class="swiper-wrapper">
-
-              <div class="swiper-slide">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8 col-md-10">
-                    <div class="testimonials text-center">
-                      <p class="testimonials__comment text-3xl md:text-2xl sm:text-xl fw-600 leading-xl text-white">
-                        Marcus has an unbelievable drive and ambition paired with fantastic attention to visual details. This makes him a perfect addition to any consumer focused product team. Our constructive discussions were often the highlight of
-                        my day.</p>
-                      <div class="testimonials__author mt-48">
-                        <div class="size-xl mx-auto mb-20">
-                          <div class="bg-image rounded-full swiper-lazy" data-background="img/testimonials/christian.webp"></div>
-                        </div>
-
-                        <h5 class="text-lg capitalize text-white fw-600">Christian Uhl</h5>
-                        <p class="capitalize text-light">Engineering Manager at <a target="_blank" href="https://personio.com/">Personio</a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8 col-md-10">
-                    <div class="testimonials text-center">
-                      <p class="testimonials__comment text-3xl md:text-2xl sm:text-xl fw-600 leading-xl text-white">
-                        I was impressed by Marcus high level of energy, motivation and focus that was also contagious among the entire team.</p>
-                      <div class="testimonials__author mt-48">
-                        <div class="size-xl mx-auto mb-20">
-                          <div class="bg-image rounded-full swiper-lazy" data-background="img/testimonials/marcin.webp"></div>
-                        </div>
-
-                        <h5 class="text-lg capitalize text-white fw-600">Marcin Stelmach</h5>
-                        <p class="capitalize text-light">Tech Lead at <a target="_blank" href="https://synerise.com/">Synerise</a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8 col-md-10">
-                    <div class="testimonials text-center">
-                      <p class="testimonials__comment text-3xl md:text-2xl sm:text-xl fw-600 leading-xl text-white">
-                        Marcus's ability to take fast and effective decision and passionately lead IT teams, is a testament to his creativity and drive. He's the kind of team leader willing to go above and beyond the call of duty every day.</p>
-                      <div class="testimonials__author mt-48">
-                        <div class="size-xl mx-auto mb-20">
-                          <div class="bg-image rounded-full swiper-lazy" data-background="img/testimonials/toto.webp"></div>
-                        </div>
-
-                        <h5 class="text-lg capitalize text-white fw-600">Toto Castiglione</h5>
-                        <p class="capitalize text-light">Design operations at <a target="_blank" href="https://www.wordpress.com/">Wordpress</a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8 col-md-10">
-                    <div class="testimonials text-center">
-                      <p class="testimonials__comment text-3xl md:text-2xl sm:text-xl fw-600 leading-xl text-white">
-                        Marcus has a rare combination of the clear vision of a product, great communication skills, patience, and a contagious passion, that drew us all to work.
-                      </p>
-                      <div class="testimonials__author mt-48">
-                        <div class="size-xl mx-auto mb-20">
-                          <div class="bg-image rounded-full swiper-lazy" data-background="img/testimonials/maciej.webp"></div>
-                        </div>
-
-                        <h5 class="text-lg capitalize text-white fw-600">Maciej Lobodzinski</h5>
-                        <p class="capitalize text-light">Founder at <a target="_blank" href="https://www.stoicroutine.com/">stoic.</a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8 col-md-10">
-                    <div class="testimonials text-center">
-                      <p class="testimonials__comment text-3xl md:text-2xl sm:text-xl fw-600 leading-xl text-white">
-                        Marcus proved himself as a great project manager with creative ideas. Using flexible and friendly approach successfully coordinating the team.</p>
-                      <div class="testimonials__author mt-48">
-                        <div class="size-xl mx-auto mb-20">
-                          <div class="bg-image rounded-full swiper-lazy" data-background="img/testimonials/zoran.webp"></div>
-                        </div>
-
-                        <h5 class="text-lg capitalize text-white fw-600">Zoran Stoilov</h5>
-                        <p class="capitalize text-light">Team Lead at <a target="_blank" href="https://www.coniq.com/">Coniq</a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="pagination -light js-pagination pt-4 mb-48"></div>
-
-
-          </div>
-        </div>
-        <!-- container end -->
-      </section>
-      <!-- section end -->
-
-      <div class="border-top-light">
-      <!-- footer start -->
-      <footer class="footer -type-1 bg-dark-1">
-        <!-- container start -->
-        <div class="container">
-
-          <div class="footer__top">
-            <!-- row start -->
-            <div class="row y-gap-48 justify-content-between">
-              <div class="col-lg-auto col-sm-12">
-                <a href="index.html" class="footer__logo text-white">
-                  Wiberg.
-                </a>
-              </div>
-
-              <div class="col-lg-3 col-sm-6">
-                <h4 class="text-xl fw-500 text-white">
-                  Location
-                </h4>
-
-                <div class="footer__content text-base text-light mt-16 sm:mt-12">
-                  <p>Berlin, Germany</p>
-                  <a href="mailto:hi@marcuswiberg.com">
-                    <p class="mt-8">hi@marcuswiberg.com</p>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-lg-auto col-sm-4">
-                <h4 class="text-xl fw-500 text-white">
-                  Legal
-                </h4>
-
-                <div class="footer__content text-base text-light mt-16 sm:mt-12">
-                  <div><a data-barba href="imprint.html" class="button -underline">Imprint</a></div>
-                  <div><a data-barba href="privacy.html" class="button -underline mt-4">Privacy</a></div>
-                  <div><a data-barba href="terms.html" class="button -underline mt-4">Terms of Service</a></div>
-                </div>
-              </div>
-
-              <div class="col-lg-auto col-auto">
-                <h4 class="text-xl fw-500 text-white">
-                  Social
-                </h4>
-
-                <div class="social -bordered mt-16 sm:mt-12">
-                  <a target="_blank" class="social__item text-white border-light" href="https://www.linkedin.com/in/marcuswiberg/">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-                  <a target="_blank" class="social__item text-white border-light" href="https://vimeo.com/bymw">
-                    <i class="fa fa-vimeo"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- row end -->
-          </div>
-
-
-          <div class="footer__bottom -light">
-            <!-- row start -->
-            <div class="row">
-              <div class="col">
-                <div class="footer__copyright">
-                  <p class="text-light">
-                    © 2020, Marcus Wiberg. Made with ❤️ in Berlin.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- row end -->
-          </div>
-
-        </div>
-        <!-- container end -->
-      </footer>
-      <!-- footer end -->
     </div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-44 space-y-44">
+      <!-- ===========================================================
+         FEATURED PRODUCTS SLIDESHOW
+         Displays another horizontal scrolling slideshow with WEBP images
+      ============================================================ -->
+      <div id="scroll-image" class="container mx-auto opacity-0 transition-opacity duration-1000 ease-in-out transform translate-y-10">
+        <!-- Introductory Text -->
+        <div class="relative mb-8 max-w-fit">
+          <p class="text-4xl max-w-4xl text-neutral-200 font-bold leading-none -ml-px"> Featured products I've worked on</p>
+        </div>
+        <!-- Slideshow of Product Images -->
+        <div class="flex space-x-4 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide px-4">
+          <!-- Individual Slideshow Images -->
+          <!-- Each image is wrapped in a flex-shrink-0 container to prevent resizing -->
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-1.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-11.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <video id="slideshow-video" class="absolute inset-0 w-full h-full object-cover" src="media/slideshow/slideshow-lab.mov" autoplay loop muted playsinline preload="auto"></video>
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-12.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-5.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <video id="slideshow-video" class="absolute inset-0 w-full h-full object-cover" src="media/slideshow/slideshow-snap.mp4" autoplay loop muted playsinline preload="auto"></video>
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-13.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-16.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-9.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-4.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-15.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-10.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-2.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-3.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-6.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img src="media/slideshow/slideshow-14.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+        </div>
+      </div>
 
+      <!-- ===========================================================
+         FEATURED PRODUCTS SLIDESHOW
+         Displays another horizontal scrolling slideshow with WEBP images
+      ============================================================ -->
+      <section id="featured-project" class="mt-32 opacity-0 transition-opacity duration-1000 ease-in-out transform translate-y-10">
+        <!-- Section Title -->
+        <div class="relative mb-8 max-w-fit space-y-4">
+          <p class="text-4xl max-w-4xl text-neutral-200 font-bold leading-none -ml-px">HealthTrackr - Blood Testing Platform</p>
+          <p class="text-2xl max-w-4xl text-gray-400 font-normal leading-none -ml-px">Unlock the secrets of your health from home</p>
+        </div>
 
-    </main>
+        <!-- Slideshow Container -->
+        <div class="relative w-full overflow-hidden rounded-lg">
+          <!-- Slides Wrapper -->
+          <div id="slideshow" class="flex transition-transform duration-500 ease-out w-full">
+            <!-- Slide 1 -->
+            <div class="w-full h-[500px] md:h-[600px] lg:h-[700px] flex-shrink-0 relative overflow-hidden group">
+              <img src="media/ht/3.webp" alt="#" class="w-full h-full object-cover rounded-lg shadow-lg transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            </div>
+            <!-- Slide 2 -->
+            <div class="w-full h-[500px] md:h-[600px] lg:h-[700px] flex-shrink-0 relative overflow-hidden group">
+              <img src="media/ht/19.webp" alt="#" class="w-full h-full object-cover rounded-lg shadow-lg transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            </div>
+            <!-- Slide 3 -->
+            <div class="w-full h-[500px] md:h-[600px] lg:h-[700px] flex-shrink-0 relative overflow-hidden group">
+              <img src="media/ht/10.webp" alt="#" class="w-full h-full object-cover rounded-lg shadow-lg transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            </div>
+            <!-- Slide 4 -->
+            <div class="w-full h-[500px] md:h-[600px] lg:h-[700px] flex-shrink-0 relative overflow-hidden group">
+              <img src="media/ht/11.webp" alt="#" class="w-full h-full object-cover rounded-lg shadow-lg transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            </div>
+          </div>
 
-  </div>
-  <!-- barba container end -->
+          <!-- Navigation Buttons -->
+          <button id="prev" class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-black bg-opacity-40 text-white text-2xl px-3 py-2 sm:px-5 sm:py-4 font-extrabold rounded-full hover:bg-opacity-50 transition"> &#8592; </button>
+          <button id="next" class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-black bg-opacity-40 text-white text-2xl px-3 py-2 sm:px-5 sm:py-4 font-extrabold rounded-full hover:bg-opacity-50 transition"> &#8594; </button>
 
+          <!-- Dots Navigation -->
+          <div id="dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <!-- Dots will be generated dynamically -->
+          </div>
+        </div>
+      </section>
 
-  <!-- JavaScript -->
-  <script src="js/vendors.js"></script>
-  <script src="js/main.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123667003-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+      <!-- ===========================================================
+         IPHONE PRODUCTS SLIDESHOW
+         Displays another horizontal scrolling slideshow with SVG images
+      ============================================================ -->
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      <!-- Image Section with Scroll Animation -->
+      <div id="scroll-image" class="container mx-auto mt-32 opacity-0 transition-opacity duration-1000 ease-in-out transform translate-y-10">
+        <!-- Introductory Text -->
+        <div class="relative mb-12 max-w-fit">
+          <p class="text-4xl max-w-4xl text-neutral-200 font-bold leading-none -ml-px"> Lorem ipsum dolor sit amet </p>
+        </div>
 
-    gtag('config', 'UA-123667003-1');
-  </script>
+        <!-- Slideshow of Product Images -->
+        <div class="flex flex-nowrap overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide px-4 gap-x-8 md:gap-x-16 lg:gap-x-24">
+          <!-- Slide 1 -->
+          <div class="flex-shrink-0 snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <object type="image/svg+xml" data="media/iphone/1.svg" class="w-full h-full shadow-lg rounded-lg" loading="lazy"> Your browser does not support SVG </object>
+          </div>
 
-</body>
+          <!-- Slide 2 -->
+          <div class="flex-shrink-0 snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <object type="image/svg+xml" data="media/iphone/2.svg" class="w-full h-full shadow-lg rounded-lg" loading="lazy"> Your browser does not support SVG </object>
+          </div>
 
+          <!-- Slide 3 -->
+          <div class="flex-shrink-0 snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <object type="image/svg+xml" data="media/iphone/3.svg" class="w-full h-full shadow-lg rounded-lg" loading="lazy"> Your browser does not support SVG </object>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="flex-shrink-0 snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <object type="image/svg+xml" data="media/iphone/4.svg" class="w-full h-full shadow-lg rounded-lg" loading="lazy"> Your browser does not support SVG </object>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===========================================================
+         FOOTER SECTION
+         Contains copyright and additional links
+      ============================================================ -->
+      <footer class="text-left py-8 mt-16 text-neutral-400">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between">
+          <!-- Copyright -->
+          <p>&copy; 2025 Marcus Wiberg. All rights reserved.</p>
+          <!-- Additional Links -->
+          <div class="mt-4 sm:mt-0 flex space-x-4">
+            <a href="imprint.html" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer"> Impressum </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

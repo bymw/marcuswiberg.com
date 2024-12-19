@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcus Wiberg - Product Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Background grid lines */
+      body {
+        background: repeating-linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.05) 0,
+            rgba(255, 255, 255, 0.05) 0.5px,
+            transparent 0.5px,
+            transparent 100px
+          ),
+          repeating-linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.05) 0,
+            rgba(255, 255, 255, 0.05) 0.5px,
+            transparent 0.5px,
+            transparent 100px
+          );
+        background-size: 100px 100px;
+        background-attachment: fixed;
+      }
+      /* Hide scrollbar for WebKit browsers */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .scrollbar-hide {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#080808] text-white antialiased flex items-center justify-center min-h-screen">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <header class="text-left py-16">
+        <!-- Flex container for heading and LinkedIn icon -->
+        <div class="flex items-center">
+          <h1 class="text-5xl font-bold">Hi, I'm Marcus</h1>
+          <a
+            href="https://www.linkedin.com/in/marcuswiberg/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ml-4 transform transition-transform duration-300 hover:scale-110"
+            aria-label="LinkedIn">
+            <!-- LinkedIn SVG Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 72 72"
+              class="w-6 h-6">
+              <g fill="none" fill-rule="evenodd">
+                <path
+                  d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z"
+                  fill="#007EBB" />
+                <path
+                  d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"
+                  fill="#FFF" />
+              </g>
+            </svg>
+          </a>
+        </div>
+
+        <p class="mt-6 text-4xl max-w-4xl">
+          I lead teams to create intelligent,
+          <span
+            class="bg-gradient-to-r from-rose-400 to-red-500 font-bold text-transparent bg-clip-text"
+            >AI-driven</span
+          >
+          systems and seamless user experiences.
+        </p>
+
+        <div class="mt-6 flex items-center space-x-2 text-lg text-neutral-400">
+          <!-- Location Icon and Text -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            class="w-6 h-6 text-gray-400">
+            <path
+              d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+          </svg>
+          <p>
+            Currently in <span class="font-bold">Berlin, Germany</span> and
+            <span class="font-bold">Riyadh, Saudi Arabia</span>
+          </p>
+        </div>
+      </header>
+      <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="group relative p-6 bg-[#1a1a1a] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <img
+            src="img/rt/b.png"
+            alt="Background Image"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" />
+          <div
+            class="relative z-10 transition duration-300 group-hover:opacity-0 group-hover:invisible">
+            <span
+              class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500"
+              >VP of Product & Design</span
+            >
+            <h2 class="mt-4 text-xl font-bold">Rimthan</h2>
+            <p class="mt-2 text-neutral-400">
+              Leading corporate venture builder serving Middle East's ecosystem.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="group relative p-6 bg-[#1a1a1a] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <img
+            src="img/ms/2.jpeg"
+            alt="Background Image"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" />
+          <div
+            class="relative z-10 transition duration-300 group-hover:opacity-0 group-hover:invisible">
+            <span
+              class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500"
+              >Head of Product & Design</span
+            >
+            <h2 class="mt-4 text-xl font-bold">Marley Spoon</h2>
+            <p class="mt-2 text-neutral-400">
+              Leading meal-kit e-commerce platforms serving USA, Australia, and
+              Europe.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="group relative p-6 bg-[#1a1a1a] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <img
+            src="img/lp/1.webp"
+            alt="Background Image"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" />
+          <div
+            class="relative z-10 transition duration-300 group-hover:opacity-0 group-hover:invisible">
+            <span
+              class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500"
+              >Head of Product</span
+            >
+            <h2 class="mt-4 text-xl font-bold">LivingPackets</h2>
+            <p class="mt-2 text-neutral-400">
+              Green, smart, and secure delivery and packaging solutions for
+              e-commerce.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="group relative p-6 bg-[#1a1a1a] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <img
+            src="img/mi/1.webp"
+            alt="Background Image"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" />
+          <div
+            class="relative z-10 transition duration-300 group-hover:opacity-0 group-hover:invisible">
+            <span
+              class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500"
+              >Head of Product</span
+            >
+            <h2 class="mt-4 text-xl font-bold">Mika</h2>
+            <p class="mt-2 text-neutral-400">
+              Clinically validated digital therapeutic for all cancer patients.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="group relative p-6 bg-[#1a1a1a] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <img
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+            src="img/sp/4.webp"
+            alt="Background Image" />
+          <div
+            class="relative z-10 transition duration-300 group-hover:opacity-0 group-hover:invisible">
+            <span
+              class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500"
+              >Founder & CEO</span
+            >
+            <h2 class="mt-4 text-xl font-bold">Switchplace</h2>
+            <p class="mt-2 text-neutral-400">
+              Real-estate platform for the swapping market.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="group relative p-6 bg-[#1a1a1a] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <img
+            src="img/sm/2.png"
+            alt="Background Image"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" />
+          <div
+            class="relative z-10 transition duration-300 group-hover:opacity-0 group-hover:invisible">
+            <span
+              class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500"
+              >Founder & CEO</span
+            >
+            <h2 class="mt-4 text-xl font-bold">Socialmist</h2>
+            <p class="mt-2 text-neutral-400">
+              Social media platform where users can share texts, photos, and
+              videos.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <section class="mt-16">
+        <h2 class="text-xl font-bold text-neutral-300 mb-4">Certifications</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Certification 1 -->
+          <div
+            class="p-4 bg-[#1a1a1a] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
+            <h3 class="text-base font-semibold text-white">
+              Introduction to Psychology
+            </h3>
+            <p>Yale University</p>
+            <p>Issued Jan 2023</p>
+            <a
+              href="https://www.coursera.org/account/accomplishments/verify/C6V82VLVEAJ2?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-2 inline-block text-blue-400 hover:underline">
+              Show credential ↗
+            </a>
+          </div>
+          <!-- Certification 2 -->
+          <div
+            class="p-4 bg-[#1a1a1a] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
+            <h3 class="text-base font-semibold text-white">
+              Agile Project Management
+            </h3>
+            <p>Google</p>
+            <p>Issued Dec 2022</p>
+            <a
+              href="https://www.coursera.org/account/accomplishments/verify/BCACDXN3BX5B?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-2 inline-block text-blue-400 hover:underline">
+              Show credential ↗
+            </a>
+          </div>
+          <!-- Certification 3 -->
+          <div
+            class="p-4 bg-[#1a1a1a] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
+            <h3 class="text-base font-semibold text-white">
+              Introduction to Artificial Intelligence (AI)
+            </h3>
+            <p>IBM</p>
+            <p>Issued Dec 2022</p>
+            <a
+              href="https://www.coursera.org/account/accomplishments/verify/2PJ5N7XDCRL7?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-2 inline-block text-blue-400 hover:underline">
+              Show credential ↗
+            </a>
+          </div>
+          <!-- Certification 4 -->
+          <div
+            class="p-4 bg-[#1a1a1a] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
+            <h3 class="text-base font-semibold text-white">
+              Introduction to Blockchain Technologies
+            </h3>
+            <p>Coursera</p>
+            <p>Issued Dec 2020</p>
+            <a
+              href="https://www.coursera.org/account/accomplishments/verify/RKFYQQ9QFKKC?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-2 inline-block text-blue-400 hover:underline">
+              Show credential ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Image Section -->
+      <div
+        id="scroll-image"
+        class="container mx-auto mt-[10vh] opacity-0 transition-opacity duration-1000 ease-in-out transform translate-y-10">
+        <!-- Intro Section -->
+        <div class="relative mb-8 max-w-fit">
+          <p
+            class="text-4xl max-w-4xl text-neutral-200 font-bold leading-none -ml-px">
+            Products I've worked on
+          </p>
+        </div>
+        <div
+          class="flex space-x-4 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide px-4">
+          <div
+            class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="img/slideshow/slideshow-11.png"
+              alt="Descriptive text here"
+              class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+              loading="lazy" />
+          </div>
+          <div
+            class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="img/slideshow/slideshow-12.png"
+              alt="Descriptive text here"
+              class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+              loading="lazy" />
+          </div>
+          <div
+          class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+          <img
+            src="img/slideshow/slideshow-13.png"
+            alt="Descriptive text here"
+            class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+            loading="lazy" />
+        </div>
+          <div
+            class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="img/slideshow/slideshow-1.png"
+              alt="Descriptive text here"
+              class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+              loading="lazy" />
+          </div>
+          <div
+            class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="img/slideshow/slideshow-9.png"
+              alt="Descriptive text here"
+              class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+              loading="lazy" />
+          </div>
+          <div
+            class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="img/slideshow/slideshow-4.png"
+              alt="Descriptive text here"
+              class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+              loading="lazy" />
+          </div>
+          <div
+            class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="img/slideshow/slideshow-10.png"
+              alt="Descriptive text here"
+              class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+              loading="lazy" />
+          </div>
+          <div
+            class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="img/slideshow/slideshow-2.png"
+              alt="Descriptive text here"
+              class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+              loading="lazy" />
+          </div>
+          <div
+            class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="img/slideshow/slideshow-5.png"
+              alt="Descriptive text here"
+              class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+              loading="lazy" />
+          </div>
+          <div
+            class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="img/slideshow/slideshow-3.png"
+              alt="Descriptive text here"
+              class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+              loading="lazy" />
+          </div>
+          <div
+            class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="img/slideshow/slideshow-6.png"
+              alt="Descriptive text here"
+              class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110"
+              loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <footer class="text-left py-8 mt-16 text-neutral-400">
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center justify-between">
+          <p>&copy; 2024 Marcus Wiberg. All rights reserved.</p>
+          <div class="mt-4 sm:mt-0 flex space-x-4">
+            <a
+              href="imprint.html"
+              class="text-blue-400 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer">
+              Impressum
+            </a>
+            <a
+              href="Resume-Marcus-Wiberg.pdf"
+              class="text-blue-400 hover:underline"
+              download>
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Scroll Animation Script -->
+    <script>
+      document.addEventListener("scroll", function () {
+        const imageSection = document.getElementById("scroll-image");
+        const rect = imageSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.top < windowHeight) {
+          imageSection.classList.remove("opacity-0", "translate-y-10");
+          imageSection.classList.add("opacity-100", "translate-y-0");
+        }
+      });
+    </script>
+  </body>
+</html>
