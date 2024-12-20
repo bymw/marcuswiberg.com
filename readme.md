@@ -1,6 +1,6 @@
 # My Portfolio Template
 
-Welcome to my personal portfolio repository! This project showcases my work as a Product and Design Leader.
+Welcome to my personal portfolio repository!
 
 Originally built for my own website, I realized it could be a valuable resource for others. Feel free to use and customize it as needed.
 
