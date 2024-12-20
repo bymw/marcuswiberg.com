@@ -4,6 +4,8 @@ Welcome to my personal portfolio repository!
 
 Originally built for my own website, I realized it could be a valuable resource for others. Feel free to use and customize it as needed.
 
+<img width="800" alt="template" src="https://github.com/user-attachments/assets/0561657f-1c98-4771-9379-a8449766d426" />
+
 ## Features
 - **Responsive Design**: Fully responsive layout optimized for various screen sizes.
 - **Well-Documented Code**: Clean, structured, and easy-to-understand codebase.
