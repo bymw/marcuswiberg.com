@@ -1,6 +1,8 @@
 # Marcus Wiberg Portfolio
 
-Welcome to my personal portfolio repository! This project showcases my work as a Product and Design Leader, focusing on creating intelligent, AI-driven systems and seamless user experiences.
+Welcome to my personal portfolio repository! This project showcases my work as a Product and Design Leader.
+
+Originally built for my own website, I realized it could be a valuable resource for others. Feel free to use and customize it as needed.
 
 ## Features
 - **Responsive Design**: Fully responsive layout optimized for various screen sizes.
@@ -17,9 +19,10 @@ Check out the live version of this portfolio at: [Marcus Wiberg - Portfolio](htt
 1. [Getting Started](#getting-started)
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [File Structure](#file-structure)
-5. [Technologies Used](#technologies-used)
-6. [License](#license)
+4. [Code Structure](#code-structure)
+5. [File Structure](#file-structure)
+6. [Technologies Used](#technologies-used)
+7. [License](#license)
 
 ## Getting Started
 This template is ideal for showcasing portfolios. Follow the installation steps below to set it up on your local machine or web server.
@@ -39,6 +42,30 @@ This template is ideal for showcasing portfolios. Follow the installation steps 
 - Update the content in the HTML file to reflect your personal or professional details.
 - Replace the placeholder images and meta tags with your own assets.
 - Modify the CSS in `dist/output.css` or `styles.css` to customize the design and animations.
+
+## Code Structure
+
+The project is organized into clear sections, ensuring readability and maintainability:
+
+### Head Section
+- **Meta Tags**: Contains meta tags for SEO, social sharing, and structured data.
+- **Icons**: Links to favicons for various devices.
+- **CSS and JS**: Includes references to the stylesheet and JavaScript files.
+
+### Body Section
+- **Background Elements**: Decorative gradients positioned in the background.
+- **Main Container**: Houses all primary content sections.
+  - **Header Section**: Includes introduction, personal branding, and social links.
+  - **Main Section**: Contains work experience cards, showcasing key roles and projects.
+  - **Certifications Section**: Highlights professional certifications with links to credentials.
+- **Featured Projects**: Displays a horizontal scrolling slideshow of featured projects with dynamic visuals.
+- **Featured Projects**: Displays a horizontal scrolling slideshow of featured projects with dynamic visuals.
+- **Mobile Experience Section**: Showcases SVG-based mobile device designs with detailed visuals.
+- **Footer Section**: Contains copyright information and additional links.
+
+### JavaScript
+- Handles interactive elements, such as slideshows, navigation, and animations.
+- Ensures responsive and dynamic user experiences.
 
 ## File Structure
 ```
