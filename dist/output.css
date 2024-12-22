@@ -1432,8 +1432,8 @@ video {
 
 .gradient {
   position: absolute;
-  width: 400px !important;
-  height: 400px !important;
+  width: 500px !important;
+  height: 500px !important;
   filter: blur(100%) !important;
   background: radial-gradient(circle, rgba(255, 99, 71, 0.5), transparent 40%);
   animation: moveGradient 16s ease-in-out infinite;
