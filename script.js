@@ -118,3 +118,42 @@ const observer = new IntersectionObserver((entries) => {
 })
 
 document.querySelectorAll('section').forEach((section) => observer.observe(section))
+
+/* ============================================================
+   Darkmode toggle
+   Function for darkmode toggle
+============================================================ */
+
+// Function to set the theme
+function setTheme(theme) {
+  if (theme === 'dark') {
+    document.documentElement.classList.add('dark')
+    document.getElementById('dark-mode-btn').classList.add('hidden')
+    document.getElementById('light-mode-btn').classList.remove('hidden')
+    localStorage.setItem('theme', 'dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+    document.getElementById('dark-mode-btn').classList.remove('hidden')
+    document.getElementById('light-mode-btn').classList.add('hidden')
+    localStorage.setItem('theme', 'light')
+  }
+}
+
+// Event listeners for buttons
+document.getElementById('dark-mode-btn').addEventListener('click', () => setTheme('dark'))
+document.getElementById('light-mode-btn').addEventListener('click', () => setTheme('light'))
+
+// Initialize theme based on user preference or system settings
+;(function () {
+  const savedTheme = localStorage.getItem('theme')
+  if (savedTheme) {
+    setTheme(savedTheme)
+  } else {
+    // If no theme is saved, use the system preference
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
+  }
+})()

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <!-- Head section -->
   <head>
     <!-- Meta Tags -->
@@ -65,29 +65,45 @@
     <link rel="stylesheet" href="dist/output.css" />
     <script src="script.js" defer></script>
   </head>
-  <body class="bg-[#080808] text-white antialiased min-h-screen">
+  <body class="bg-white text-black dark:bg-[#080808] dark:text-white antialiased min-h-screen">
     <!-- Background gradients -->
     <div class="gradient" style="top: 48%; right: 49%"></div>
     <div class="gradient" style="top: 47%; right: 44%"></div>
     <div class="gradient" style="top: 46%; right: 45%"></div>
 
-    <!-- Darkmode Checkox -->
-    <div class="flex items-center justify-end p-4">
-      <label for="dark-mode-toggle" class="flex items-center cursor-pointer">
-        <div class="relative">
-          <input id="dark-mode-toggle" type="checkbox" class="sr-only" />
-          <div class="block w-10 h-6 bg-gray-200 rounded-full"></div>
-          <div class="dot absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition"></div>
-        </div>
-        <span class="ml-3 text-sm text-gray-700 dark:text-gray-300">Dark Mode</span>
-      </label>
+    <!-- Theme Switcher Container -->
+    <div class="fixed top-4 right-4 z-50">
+      <!-- Dark Mode Button -->
+      <button type="button" id="dark-mode-btn" aria-label="Switch to dark mode" class="inline-flex items-center gap-x-2 py-2 px-3 bg-gray-800/40 rounded-full text-sm text-white hover:bg-gray-800/60 focus:outline-none focus:bg-gray-800/20">
+        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+        Dark
+      </button>
+
+      <!-- Light Mode Button -->
+      <button type="button" id="light-mode-btn" aria-label="Switch to light mode" class="hidden inline-flex items-center gap-x-2 py-2 px-3 bg-gray-200/40 rounded-full text-sm text-black hover:bg-gray-200/60 focus:outline-none focus:bg-gray-200/20">
+        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path>
+          <path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="m6.34 17.66-1.41 1.41"></path>
+          <path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+        Light
+      </button>
     </div>
+
     <!-- Section: Header -->
     <section class="mt-16">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <header>
           <div class="flex items-center">
-            <h1 class="text-5xl font-bold">Hi, I'm Marcus</h1>
+            <h1 class="text-5xl font-bold text-gray-900 dark:text-white">Hi, I'm Marcus</h1>
             <a href="https://www.linkedin.com/in/marcuswiberg/" target="_blank" class="ml-4 transform transition-transform duration-300 hover:scale-110" aria-label="LinkedIn">
               <!-- LinkedIn SVG Icon -->
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" class="w-6 h-6">
@@ -102,8 +118,8 @@
               </svg>
             </a>
           </div>
-          <p class="mt-6 text-4xl max-w-4xl"> I lead teams to create intelligent, <span class="bg-gradient-to-r from-rose-400 to-red-500 font-bold text-transparent bg-clip-text">AI-driven</span> systems and seamless user experiences. </p>
-          <div class="mt-6 flex items-center space-x-2 text-lg text-neutral-400">
+          <p class="mt-6 text-4xl max-w-4xl text-gray-800 dark:text-gray-200"> I lead teams to create intelligent, <span class="bg-gradient-to-r from-rose-400 to-red-500 font-bold text-transparent bg-clip-text">AI-driven</span> systems and seamless user experiences. </p>
+          <div class="mt-6 flex items-center space-x-2 text-lg text-gray-600 dark:text-gray-400">
             <!-- Location Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-gray-400">
               <path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
@@ -120,7 +136,7 @@
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
           <!-- Marley Spoon -->
-          <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <div class="group relative p-6 bg-white dark:bg-[#0d0d0d] border border-gray-800 dark:border-gray-800 border-opacity-10 rounded-lg overflow-hidden">
             <!-- Flag Overlay -->
             <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
               <img src="media/flags/eu.svg" alt="Europe Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" loading="lazy" />
@@ -129,7 +145,7 @@
             </div>
 
             <!-- Card Content -->
-            <div class="relative z-10 transition duration-300">
+            <div class="relative z-10">
               <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Head of Product & Design</span>
               <h2 class="mt-4 text-xl font-bold">Marley Spoon</h2>
               <p class="mt-2 text-neutral-400">Leading meal-kit e-commerce platforms serving USA, Australia, and Europe.</p>
@@ -137,7 +153,7 @@
           </div>
 
           <!-- MW Ventures -->
-          <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <div class="group relative p-6 bg-white dark:bg-[#0d0d0d] border border-gray-800 dark:border-gray-800 border-opacity-10 rounded-lg overflow-hidden">
             <!-- Flag Overlay -->
             <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
               <img src="media/flags/de.svg" alt="Germany Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" loading="lazy" />
@@ -145,7 +161,7 @@
             </div>
 
             <!-- Card Content -->
-            <div class="relative z-10 transition duration-300">
+            <div class="relative z-10">
               <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Founder</span>
               <h2 class="mt-4 text-xl font-bold">MW Ventures</h2>
               <p class="mt-2 text-neutral-400">Product development agency focused on hardware, web and native app development.</p>
@@ -153,7 +169,7 @@
           </div>
 
           <!-- LivingPackets -->
-          <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <div class="group relative p-6 bg-white dark:bg-[#0d0d0d] border border-gray-800 dark:border-gray-800 border-opacity-10 rounded-lg overflow-hidden">
             <!-- Flag Overlay -->
             <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
               <img src="media/flags/de.svg" alt="Germany Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" loading="lazy" />
@@ -161,7 +177,7 @@
             </div>
 
             <!-- Card Content -->
-            <div class="relative z-10 transition duration-300">
+            <div class="relative z-10">
               <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Product Lead</span>
               <h2 class="mt-4 text-xl font-bold">LivingPackets</h2>
               <p class="mt-2 text-neutral-400">Green, smart, and secure delivery and packaging solutions for e-commerce.</p>
@@ -169,14 +185,14 @@
           </div>
 
           <!-- Mika -->
-          <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <div class="group relative p-6 bg-white dark:bg-[#0d0d0d] border border-gray-800 dark:border-gray-800 border-opacity-10 rounded-lg overflow-hidden">
             <!-- Flag Overlay -->
             <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
               <img src="media/flags/de.svg" alt="Germany Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" loading="lazy" />
             </div>
 
             <!-- Card Content -->
-            <div class="relative z-10 transition duration-300">
+            <div class="relative z-10">
               <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Head of Product</span>
               <h2 class="mt-4 text-xl font-bold">Mika</h2>
               <p class="mt-2 text-neutral-400">Clinically validated digital therapeutic for all cancer patients.</p>
@@ -184,14 +200,14 @@
           </div>
 
           <!-- Matmatch -->
-          <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <div class="group relative p-6 bg-white dark:bg-[#0d0d0d] border border-gray-800 dark:border-gray-800 border-opacity-10 rounded-lg overflow-hidden">
             <!-- Flag Overlay -->
             <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
               <img src="media/flags/de.svg" alt="Germany Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" loading="lazy" />
             </div>
 
             <!-- Card Content -->
-            <div class="relative z-10 transition duration-300">
+            <div class="relative z-10">
               <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Head of Product</span>
               <h2 class="mt-4 text-xl font-bold">Matmatch</h2>
               <p class="mt-2 text-neutral-400">Matmatch is a comprehensive materials search platform.</p>
@@ -199,14 +215,14 @@
           </div>
 
           <!-- Switchplace -->
-          <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <div class="group relative p-6 bg-white dark:bg-[#0d0d0d] border border-gray-800 dark:border-gray-800 border-opacity-10 rounded-lg overflow-hidden">
             <!-- Flag Overlay -->
             <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
               <img src="media/flags/se.svg" alt="Sweden Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" loading="lazy" />
             </div>
 
             <!-- Card Content -->
-            <div class="relative z-10 transition duration-300">
+            <div class="relative z-10">
               <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Founder & CEO</span>
               <h2 class="mt-4 text-xl font-bold">Switchplace</h2>
               <p class="mt-2 text-neutral-400">Real-estate platform for the swapping market.</p>
@@ -214,7 +230,7 @@
           </div>
 
           <!-- Socialmist -->
-          <div class="group relative p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg overflow-hidden transition duration-300">
+          <div class="group relative p-6 bg-white dark:bg-[#0d0d0d] border border-gray-800 dark:border-gray-800 border-opacity-10 rounded-lg overflow-hidden">
             <!-- Flag Overlay -->
             <div class="absolute top-2 right-2 flex space-x-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
               <img src="media/flags/se.svg" alt="Sweden Flag" class="w-6 h-6 object-cover rounded-full border-2 border-white border-opacity-10 shadow-sm" loading="lazy" />
@@ -223,7 +239,7 @@
             </div>
 
             <!-- Card Content -->
-            <div class="relative z-10 transition duration-300">
+            <div class="relative z-10">
               <span class="text-xs uppercase bg-opacity-10 text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-300 text-blue-500">Founder & CEO</span>
               <h2 class="mt-4 text-xl font-bold">Socialmist</h2>
               <p class="mt-2 text-neutral-400">Social media platform where users can share texts, photos, and videos.</p>
@@ -236,29 +252,29 @@
     <!-- Section: Certifications -->
     <section class="mt-16">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl font-bold text-neutral-300 mb-4">Certifications</h2>
+        <h2 class="text-xl font-bold text-gray-700 dark:text-gray-300 mb-4">Certifications</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <!-- Certification: Introduction to Artificial Intelligence (AI) -->
-          <div class="p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
-            <h3 class="text-base font-semibold text-white"> Introduction to Artificial Intelligence (AI) </h3>
+          <div class="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-white">Introduction to Artificial Intelligence (AI)</h3>
             <p>IBM</p>
             <a href="https://www.coursera.org/account/accomplishments/verify/2PJ5N7XDCRL7?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-blue-400 hover:underline"> Show credential ↗ </a>
           </div>
           <!-- Certification: Introduction to Psychology -->
-          <div class="p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
-            <h3 class="text-base font-semibold text-white"> Introduction to Psychology </h3>
+          <div class="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-white"> Introduction to Psychology </h3>
             <p>Yale University</p>
             <a href="https://www.coursera.org/account/accomplishments/verify/C6V82VLVEAJ2?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-blue-400 hover:underline"> Show credential ↗ </a>
           </div>
           <!-- Certification: Agile Project Management -->
-          <div class="p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
-            <h3 class="text-base font-semibold text-white"> Agile Project Management </h3>
+          <div class="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-white"> Agile Project Management </h3>
             <p>Google</p>
             <a href="https://www.coursera.org/account/accomplishments/verify/BCACDXN3BX5B?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-blue-400 hover:underline"> Show credential ↗ </a>
           </div>
           <!-- Certification: Introduction to Blockchain Technologies -->
-          <div class="p-6 bg-[#0d0d0d] border border-white border-opacity-10 rounded-lg text-sm text-neutral-400">
-            <h3 class="text-base font-semibold text-white"> Introduction to Blockchain Technologies </h3>
+          <div class="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-white"> Introduction to Blockchain Technologies </h3>
             <p>Insead</p>
             <a href="https://www.coursera.org/account/accomplishments/verify/RKFYQQ9QFKKC?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" rel="noopener noreferrer" class="mt-2 inline-block text-blue-400 hover:underline"> Show credential ↗ </a>
           </div>
@@ -270,7 +286,7 @@
     <section class="mt-24">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative mb-8 max-w-fit">
-          <p class="text-4xl max-w-4xl text-neutral-200 font-bold leading-none">Featured products I've worked on</p>
+          <p class="text-4xl max-w-4xl text-gray-700 dark:text-gray-100 font-bold leading-none">Featured products I've worked on</p>
         </div>
         <div class="flex space-x-4 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide">
           <!-- Slides -->
@@ -329,8 +345,8 @@
     <section class="mt-24">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative mb-8 max-w-fit space-y-4">
-          <p class="text-4xl max-w-4xl text-neutral-200 font-bold leading-none">HealthTrackr - Blood Testing Platform</p>
-          <p class="text-2xl max-w-4xl text-gray-400 font-normal leading-none">Unlock the secrets of your health from home</p>
+          <p class="text-4xl max-w-4xl text-gray-700 dark:text-gray-200 font-bold leading-none">HealthTrackr - Blood Testing Platform</p>
+          <p class="text-2xl max-w-4xl text-gray-400 dark:text-gray-400 font-normal leading-none">Unlock the secrets of your health from home</p>
         </div>
         <div class="relative w-full overflow-hidden rounded-lg">
           <div id="slideshow" class="flex transition-transform duration-500 ease-out w-full">
@@ -364,7 +380,7 @@
     <section class="mt-24">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative mb-12 max-w-fit">
-          <p class="text-4xl max-w-4xl text-neutral-200 font-bold leading-none">The Mobile Experience</p>
+          <p class="text-4xl max-w-4xl text-neutral-700 dark:text-gray-200 font-bold leading-none">The Mobile Experience</p>
         </div>
         <div class="flex flex-nowrap overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide px-4 gap-x-8">
           <!-- Slide 1 -->
@@ -388,7 +404,7 @@
     </section>
 
     <!-- Section: Footer -->
-    <footer class="mt-16 py-8 text-neutral-400">
+    <footer class="mt-16 py-8 text-neutral-800 dark:text-gray-300">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between">
           <p>&copy; 2025 Marcus Wiberg. All rights reserved.</p>
