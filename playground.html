@@ -74,7 +74,7 @@
     <!-- Theme Switcher Container -->
     <div class="fixed top-4 right-4 z-50">
       <!-- Dark Mode Button -->
-      <button type="button" id="dark-mode-btn" aria-label="Switch to dark mode" class="inline-flex items-center border border-gray-700 gap-x-2 py-2 px-3 bg-white rounded-full text-sm text-black hover:bg-gray-800/10 focus:outline-none focus:bg-gray-800/20">
+      <button type="button" id="dark-mode-btn" aria-label="Switch to dark mode" class="inline-flex items-center border border-gray-700 gap-x-2 py-2 px-3 bg-white rounded-full text-sm text-black hover:bg-gray-100 focus:outline-none focus:bg-gray-800/20">
         <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
         </svg>
@@ -82,7 +82,7 @@
       </button>
 
       <!-- Light Mode Button -->
-      <button type="button" id="light-mode-btn" aria-label="Switch to light mode" class="hidden inline-flex items-center border border-gray-700 gap-x-2 py-2 px-3 bg-black rounded-full text-sm text-white hover:bg-gray-200/10 focus:outline-none focus:bg-gray-200/20">
+      <button type="button" id="light-mode-btn" aria-label="Switch to light mode" class="hidden inline-flex items-center border border-gray-700 gap-x-2 py-2 px-3 bg-black rounded-full text-sm text-white hover:bg-gray-900 focus:outline-none focus:bg-gray-200/20">
         <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="4"></circle>
           <path d="M12 2v2"></path>
@@ -116,112 +116,45 @@
         <header>
           <div class="flex items-center space-x-4">
             <h1 class="text-5xl font-bold text-gray-900 dark:text-white">Hi, I'm Marcus</h1>
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="hover:text-blue-700 dark:hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="LinkedIn" title="Follow me on LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 72 72" class="w-6 h-6">
-                <g fill="none" fill-rule="evenodd">
-                  <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,0 64,0 L8,0 C3.581722,0 0,3.581722 0,8 L0,64 C0,68.418278 3.581722,72 8,72 Z" fill="currentColor" />
-                  <path
-                    d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"
-                    fill="#FFF" />
-                </g>
-              </svg>
-            </a>
-
-            <!-- X (formerly Twitter) -->
-            <a href="https://x.com/yourusername" target="_blank" rel="noopener noreferrer" class="hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#1DA1F2]" aria-label="X" title="Follow me on X">
-              <!-- Updated X Icon SVG -->
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 150 150" class="w-6 h-6">
-                <path
-                  d="M67 .55C40.648 3.3 17.102 20.649 6.398 45.2-0.5 61.05-1.648 79.3 3.25 96.101c6.05 20.949 21.7 38.648 41.95 47.5 15.85 6.898 34.1 8.046 50.902 3.148 25.148-7.25 44.949-27.898 51.449-53.55C157.699 53 132.8 11.897 92.5 2.3 83.648.2 75.852-.351 67 .55ZM68 47c6.398 8.5 11.8 15.5 12 15.5.2 0 6.852-7 14.7-15.5l14.35-15.5h8.15l-1.75 1.852c-1 1.046-7.5 8.097-14.45 15.648-6.95 7.55-13.75 14.898-15.102 16.25L83.5 67.8l18.75 24.95c10.3 13.75 18.75 25.148 18.75 25.352 0 .25-6.148.398-13.602.398l-13.648-.05-12.7-17C72.3 89.7 68.2 84.647 67.8 84.95c-.3.25-7.402 7.902-15.8 17L36.75 118.5h-3.852c-2.148 0-3.898-.102-3.898-.25 0-.148 7.95-8.852 17.648-19.3 9.653-10.45 17.653-19.2 17.75-19.348C64.45 79.398 56.5 68.55 46.75 55.5 37 42.5 29 31.75 29 31.648c0-.097 6.148-.148 13.7-.148h13.698Zm0 0"
-                  style="stroke: none; fill-rule: nonzero; fill: currentColor; fill-opacity: 1" />
-                <path d="M41.352 38.2c.199.35 12.796 17.25 27.898 37.448l27.5 36.801 6.148.051c3.801 0 6.102-.2 6-.5-.046-.25-12.597-17.148-27.796-37.5l-27.704-37H47.2c-5.148 0-6.199.102-5.847.7Zm0 0" style="stroke: none; fill-rule: nonzero; fill: currentColor; fill-opacity: 1" />
-              </svg>
-            </a>
-
-            <!-- GitHub -->
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500" aria-label="GitHub" title="Follow me on GitHub">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
-                <path
-                  d="M12 .297c-6.63 0-12 5.373-12 12
-                             0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577
-                             0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
-                             -.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729
-                             .084-.729 1.205.084 1.838 1.236 1.838 1.236
-                             1.07 1.835 2.809 1.305 3.495.998
-                             .108-.776.42-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93
-                             0-1.31.468-2.38 1.235-3.22-.135-.303-.54-1.523
-                             .105-3.176 0 0 1.005-.322 3.3 1.23a11.49 11.49 0
-                             013.003-.404c1.02.005 2.045.138
-                             3.003.404 2.28-1.552 3.285-1.23
-                             3.285-1.23.645 1.653.24 2.873.12
-                             3.176.77.84 1.23 1.91
-                             1.23 3.22 0 4.61-2.805
-                             5.625-5.475 5.92.435.375.81 1.102.81
-                             2.222 0 1.606-.015 2.896-.015
-                             3.286 0 .315.21.69.825.57C20.565 22.092
-                             24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-              </svg>
-            </a>
           </div>
           <p class="mt-6 text-4xl max-w-4xl text-gray-800 dark:text-gray-200"> I lead teams to create intelligent, <span class="bg-gradient-to-r from-rose-400 to-red-500 font-bold text-transparent bg-clip-text">AI-driven</span> systems and seamless user experiences. </p>
           <div class="mt-6">
             <!-- Unified Flex Container for Location and Social Icons -->
-            <div class="flex flex-wrap items-center space-x-4 text-lg text-gray-600 dark:text-gray-400">
+            <div class="flex flex-wrap items-center space-x-4 text-lg text-gray-600 dark:text-gray-500">
               <!-- Social Icons Section -->
               <div class="flex space-x-4">
                 <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="hover:text-blue-700 dark:hover:text-blue-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="LinkedIn" title="Follow me on LinkedIn">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 72 72" class="w-6 h-6">
-                    <g fill="none" fill-rule="evenodd">
-                      <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,0 64,0 L8,0 C3.581722,0 0,3.581722 0,8 L0,64 C0,68.418278 3.581722,72 8,72 Z" fill="currentColor" />
-                      <path
-                        d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"
-                        fill="#FFF" />
-                    </g>
+                <a href="https://www.linkedin.com/in/marcuswiberg/" class="hover:text-gray-800 dark:hover:text-gray-300 text-gray-600 dark:text-gray-500 transition-colors duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
                   </svg>
                 </a>
 
                 <!-- X (formerly Twitter) -->
-                <a href="https://x.com/yourusername" target="_blank" rel="noopener noreferrer" class="hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#1DA1F2]" aria-label="X" title="Follow me on X">
-                  <!-- Updated X Icon SVG -->
+                <a href="https://x.com/immarcuswiberg" target="_blank" rel="noopener noreferrer" class="hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="X" title="Follow me on X">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 150 150" class="w-6 h-6">
                     <path
                       d="M67 .55C40.648 3.3 17.102 20.649 6.398 45.2-0.5 61.05-1.648 79.3 3.25 96.101c6.05 20.949 21.7 38.648 41.95 47.5 15.85 6.898 34.1 8.046 50.902 3.148 25.148-7.25 44.949-27.898 51.449-53.55C157.699 53 132.8 11.897 92.5 2.3 83.648.2 75.852-.351 67 .55ZM68 47c6.398 8.5 11.8 15.5 12 15.5.2 0 6.852-7 14.7-15.5l14.35-15.5h8.15l-1.75 1.852c-1 1.046-7.5 8.097-14.45 15.648-6.95 7.55-13.75 14.898-15.102 16.25L83.5 67.8l18.75 24.95c10.3 13.75 18.75 25.148 18.75 25.352 0 .25-6.148.398-13.602.398l-13.648-.05-12.7-17C72.3 89.7 68.2 84.647 67.8 84.95c-.3.25-7.402 7.902-15.8 17L36.75 118.5h-3.852c-2.148 0-3.898-.102-3.898-.25 0-.148 7.95-8.852 17.648-19.3 9.653-10.45 17.653-19.2 17.75-19.348C64.45 79.398 56.5 68.55 46.75 55.5 37 42.5 29 31.75 29 31.648c0-.097 6.148-.148 13.7-.148h13.698Zm0 0"
                       style="stroke: none; fill-rule: nonzero; fill: currentColor; fill-opacity: 1" />
-                    <path d="M41.352 38.2c.199.35 12.796 17.25 27.898 37.448l27.5 36.801 6.148.051c3.801 0 6.102-.2 6-.5-.046-.25-12.597-17.148-27.796-37.5l-27.704-37H47.2c-5.148 0-6.199.102-5.847.7Zm0 0" style="stroke: none; fill-rule: nonzero; fill: currentColor; fill-opacity: 1" />
                   </svg>
                 </a>
 
                 <!-- GitHub -->
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500" aria-label="GitHub" title="Follow me on GitHub">
+                <a href="https://github.com/bymw/marcuswiberg.com" target="_blank" rel="noopener noreferrer" class="hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="GitHub" title="Follow me on GitHub">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
                     <path
-                      d="M12 .297c-6.63 0-12 5.373-12 12
-                             0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577
-                             0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
-                             -.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729
-                             .084-.729 1.205.084 1.838 1.236 1.838 1.236
-                             1.07 1.835 2.809 1.305 3.495.998
-                             .108-.776.42-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93
-                             0-1.31.468-2.38 1.235-3.22-.135-.303-.54-1.523
-                             .105-3.176 0 0 1.005-.322 3.3 1.23a11.49 11.49 0
-                             013.003-.404c1.02.005 2.045.138
-                             3.003.404 2.28-1.552 3.285-1.23
-                             3.285-1.23.645 1.653.24 2.873.12
-                             3.176.77.84 1.23 1.91
-                             1.23 3.22 0 4.61-2.805
-                             5.625-5.475 5.92.435.375.81 1.102.81
-                             2.222 0 1.606-.015 2.896-.015
-                             3.286 0 .315.21.69.825.57C20.565 22.092
-                             24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.42-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.49 11.49 0 013.003-.404c1.02.005 2.045.138 3.003.404 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.77.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                   </svg>
                 </a>
               </div>
+              <!-- Divider -->
+              <div class="w-px h-4 bg-gray-400 dark:bg-gray-600"></div>
+
               <!-- Location Section -->
-              <div class="flex items-center space-x-2">
+              <div class="flex items-center space-x-2 text-gray-600 dark:text-gray-500">
                 <!-- Location Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
                   <path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
                 </svg>
                 <!-- Location Text -->
@@ -385,64 +318,192 @@
     </section>
 
     <!-- Section: Featured Projects -->
+    <!-- Section: Featured Projects -->
     <section class="mt-24">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative mb-8 max-w-fit">
           <p class="text-4xl max-w-4xl text-gray-700 dark:text-gray-100 font-bold leading-none">Featured products I've worked on</p>
         </div>
         <div class="flex space-x-4 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide">
-          <!-- Slides -->
+          <!-- Slide 1 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-1.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-1.webp" alt="Healthtrackr - Explore your health markers" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">MarleySpoon</h3>
+              <p class="text-white text-sm">Choose your recipes & market items</p>
+            </div>
           </div>
+
+          <!-- Slide 2 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-11.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-11.webp" alt="Project Title 2 - Project Description 2" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Healthtrackr</h3>
+              <p class="text-white text-sm">Explore your health markers</p>
+            </div>
           </div>
+
+          <!-- Slide 3 (Video) -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
             <video id="slideshow-video" class="absolute inset-0 w-full h-full object-cover" src="media/slideshow/slideshow-lab.mov" autoplay loop muted playsinline preload="auto"></video>
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Medical Lab</h3>
+              <p class="text-white text-sm">The medical lab in action</p>
+            </div>
           </div>
+
+          <!-- Slide 4 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-12.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-12.webp" alt="Project Title 4 - Project Description 4" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Healthtrackr</h3>
+              <p class="text-white text-sm">Tablet view of the homepage</p>
+            </div>
           </div>
+
+          <!-- Slide 5 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-5.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-5.webp" alt="Project Title 5 - Project Description 5" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Switchplace</h3>
+              <p class="text-white text-sm">Swipe to match other apartments</p>
+            </div>
           </div>
+
+          <!-- Slide 6 (Video) -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
             <video id="slideshow-video" class="absolute inset-0 w-full h-full object-cover" src="media/slideshow/slideshow-snap.mp4" autoplay loop muted playsinline preload="auto"></video>
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">SnapSound</h3>
+              <p class="text-white text-sm">Music video editor for social platforms</p>
+            </div>
           </div>
+
+          <!-- Slide 7 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-13.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-13.webp" alt="Project Title 7 - Project Description 7" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Healthtrackr</h3>
+              <p class="text-white text-sm">Health summary from blood test</p>
+            </div>
           </div>
+
+          <!-- Slide 8 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-16.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-16.webp" alt="Project Title 8 - Project Description 8" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Matmatch</h3>
+              <p class="text-white text-sm">Exploring mechanical properties</p>
+            </div>
           </div>
+
+          <!-- Slide 9 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-9.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-9.webp" alt="Project Title 9 - Project Description 9" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Marley Spoon</h3>
+              <p class="text-white text-sm">Viewing upcoming orders</p>
+            </div>
           </div>
+
+          <!-- Slide 10 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-4.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-4.webp" alt="Project Title 10 - Project Description 10" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Switchplace</h3>
+              <p class="text-white text-sm">Viewing apartment profile</p>
+            </div>
           </div>
+
+          <!-- Slide 11 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-15.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-15.webp" alt="Project Title 11 - Project Description 11" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Project Title 11</h3>
+              <p class="text-white text-sm">Project Description 11</p>
+            </div>
           </div>
+
+          <!-- Slide 12 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-10.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-10.webp" alt="Project Title 12 - Project Description 12" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Project Title 12</h3>
+              <p class="text-white text-sm">Project Description 12</p>
+            </div>
           </div>
+
+          <!-- Slide 13 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-2.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-2.webp" alt="Project Title 13 - Project Description 13" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Project Title 13</h3>
+              <p class="text-white text-sm">Project Description 13</p>
+            </div>
           </div>
+
+          <!-- Slide 14 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-3.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-3.webp" alt="Project Title 14 - Project Description 14" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Project Title 14</h3>
+              <p class="text-white text-sm">Project Description 14</p>
+            </div>
           </div>
+
+          <!-- Slide 15 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-6.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-6.webp" alt="Project Title 15 - Project Description 15" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Project Title 15</h3>
+              <p class="text-white text-sm">Project Description 15</p>
+            </div>
           </div>
+
+          <!-- Slide 16 -->
           <div class="flex-shrink-0 w-96 h-[600px] snap-start group relative overflow-hidden rounded-lg shadow-lg">
-            <img src="media/slideshow/slideshow-14.webp" alt="Descriptive text here" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+            <img src="media/slideshow/slideshow-14.webp" alt="Project Title 16 - Project Description 16" class="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 px-4 py-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h3 class="text-white text-xl font-semibold">Project Title 16</h3>
+              <p class="text-white text-sm">Project Description 16</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Section: HealthTrackr Project -->
     <section class="mt-24">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -458,15 +519,15 @@
             </div>
             <!-- Slide 2 -->
             <div class="w-full h-[500px] md:h-[600px] lg:h-[700px] flex-shrink-0 relative overflow-hidden group">
-              <img src="media/ht/19.webp" alt="#" class="w-full h-full object-cover rounded-lg shadow-lg transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+              <img src="media/ht/1.webp" alt="#" class="w-full h-full object-cover rounded-lg shadow-lg transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
             </div>
             <!-- Slide 3 -->
             <div class="w-full h-[500px] md:h-[600px] lg:h-[700px] flex-shrink-0 relative overflow-hidden group">
-              <img src="media/ht/10.webp" alt="#" class="w-full h-full object-cover rounded-lg shadow-lg transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+              <img src="media/ht/7.webp" alt="#" class="w-full h-full object-cover rounded-lg shadow-lg transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
             </div>
-            <!-- Slide 4 -->
+            <!-- Slide 34 -->
             <div class="w-full h-[500px] md:h-[600px] lg:h-[700px] flex-shrink-0 relative overflow-hidden group">
-              <img src="media/ht/11.webp" alt="#" class="w-full h-full object-cover rounded-lg shadow-lg transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
+              <img src="media/ht/4.webp" alt="#" class="w-full h-full object-cover rounded-lg shadow-lg transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" loading="lazy" />
             </div>
           </div>
           <!-- Navigation Buttons -->
@@ -479,7 +540,7 @@
     </section>
 
     <!-- Section: Mobile Experience -->
-    <section class="mt-24">
+    <section class="my-24">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative mb-12 max-w-fit">
           <p class="text-4xl max-w-4xl text-neutral-700 dark:text-gray-200 font-bold leading-none">The Mobile Experience</p>
