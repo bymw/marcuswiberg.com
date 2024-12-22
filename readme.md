@@ -55,7 +55,7 @@ The project is organized into clear sections, ensuring readability and maintaina
 ### Body Section
 - **Background Elements**: Decorative gradients positioned in the background.
 - **Header Section**: Includes introduction, personal branding, and social links.
-- **Main Section**: Contains work experience cards, showcasing key roles and projects.
+- **Work Positions Component**: Contains work experience cards, showcasing key roles and projects.
 - **Certifications Section**: Highlights professional certifications with links to credentials.
 - **Featured Projects Component 1**: Displays a horizontal scrolling slideshow of featured projects with dynamic visuals.
 - **Featured Projects Component 2**: Displays a horizontal scrolling slideshow of featured projects with dynamic visuals.
