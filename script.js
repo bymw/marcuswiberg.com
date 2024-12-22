@@ -157,3 +157,50 @@ document.getElementById('light-mode-btn').addEventListener('click', () => setThe
     }
   }
 })()
+
+// JavaScript to handle the back-to-top button
+// Wait until the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Select the "Back to Top" button by its ID
+  const backToTopButton = document.getElementById('btn-back-to-top')
+
+  // Check if the button exists in the DOM
+  if (!backToTopButton) {
+    console.error('Error: "Back to Top" button with ID "btn-back-to-top" not found.')
+    return
+  }
+
+  /**
+   * Function to toggle the visibility of the "Back to Top" button
+   * Shows the button when the user scrolls down more than 100px
+   * Hides the button when the user is near the top of the page
+   */
+  const toggleBackToTopButton = () => {
+    const scrollPosition = window.scrollY || window.pageYOffset
+    if (scrollPosition > 100) {
+      // Adjust the scroll threshold as needed
+      backToTopButton.classList.remove('hidden')
+    } else {
+      backToTopButton.classList.add('hidden')
+    }
+  }
+
+  /**
+   * Function to smoothly scroll the user back to the top of the page
+   */
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+
+  // Attach the scroll event listener to the window
+  window.addEventListener('scroll', toggleBackToTopButton)
+
+  // Attach the click event listener to the "Back to Top" button
+  backToTopButton.addEventListener('click', scrollToTop)
+
+  // Initialize the button's visibility based on the current scroll position
+  toggleBackToTopButton()
+})
