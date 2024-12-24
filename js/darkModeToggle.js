@@ -6,6 +6,20 @@
  */
 
 /**
+ * Dynamically updates <meta name="theme-color"> so that mobile
+ * browsers match the address bar color to the current theme.
+ *
+ * @param {boolean} isDark - Whether the theme is dark or not.
+ */
+function updateMetaThemeColor(isDark) {
+  const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+  if (!metaThemeColor) return
+
+  // Adjust these colors to match your desired dark/light scheme
+  metaThemeColor.setAttribute('content', isDark ? '#080808' : '#ffffff')
+}
+
+/**
  * Sets the website theme to either dark or light mode.
  *
  * @param {string} theme - The desired theme, either 'dark' or 'light'.
@@ -15,7 +29,7 @@ function setTheme(theme) {
   const lightModeButton = document.getElementById('light-mode-btn')
 
   if (theme === 'dark') {
-    // Apply dark mode by adding the 'dark' class to the HTML element
+    // Apply dark mode by adding the 'dark' class to <html>
     document.documentElement.classList.add('dark')
 
     // Hide the dark mode toggle button and show the light mode button
@@ -24,8 +38,11 @@ function setTheme(theme) {
 
     // Save the user's preference in localStorage
     localStorage.setItem('theme', 'dark')
+
+    // Update the meta tag color for mobile (dark)
+    updateMetaThemeColor(true)
   } else {
-    // Remove dark mode by removing the 'dark' class from the HTML element
+    // Remove dark mode by removing the 'dark' class from <html>
     document.documentElement.classList.remove('dark')
 
     // Show the dark mode toggle button and hide the light mode button
@@ -34,6 +51,9 @@ function setTheme(theme) {
 
     // Save the user's preference in localStorage
     localStorage.setItem('theme', 'light')
+
+    // Update the meta tag color for mobile (light)
+    updateMetaThemeColor(false)
   }
 }
 
@@ -56,7 +76,7 @@ document.getElementById('light-mode-btn').addEventListener('click', () => setThe
     // Apply the saved theme preference
     setTheme(savedTheme)
   } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // If no preference is saved, and the system prefers dark mode, apply dark theme
+    // If no preference is saved and the system prefers dark mode
     setTheme('dark')
   } else {
     // Otherwise, default to light theme
