@@ -6,17 +6,46 @@
  */
 
 /**
- * Dynamically updates <meta name="theme-color"> so that mobile
- * browsers match the address bar color to the current theme.
+ * Removes the existing <meta name="theme-color"> tag.
+ */
+function removeThemeMetaTag() {
+  const existingMeta = document.querySelector('meta[name="theme-color"]')
+  if (existingMeta) {
+    existingMeta.remove()
+  }
+}
+
+/**
+ * Injects a new <meta name="theme-color"> tag with the specified color.
+ */
+function injectThemeMetaTag(color) {
+  const meta = document.createElement('meta')
+  meta.setAttribute('name', 'theme-color')
+  meta.setAttribute('content', color)
+  document.head.appendChild(meta)
+}
+
+/**
+ * Updates the <meta name="theme-color"> tag to match light or dark mode.
  *
  * @param {boolean} isDark - Whether the theme is dark or not.
  */
 function updateMetaThemeColor(isDark) {
-  const metaThemeColor = document.querySelector('meta[name="theme-color"]')
-  if (!metaThemeColor) return
+  removeThemeMetaTag()
+  // iOS Safari is more likely to honor newly appended meta tags
+  injectThemeMetaTag(isDark ? '#080808' : '#ffffff')
+}
 
-  // Adjust these colors to match your desired dark/light scheme
-  metaThemeColor.setAttribute('content', isDark ? '#080808' : '#ffffff')
+/**
+ * Forces a short reflow of the document to (sometimes) make iOS Safari
+ * recognize the newly injected meta theme color.
+ */
+function forceRepaint() {
+  const doc = document.documentElement
+  doc.style.display = 'none'
+  // Force layout reflow
+  void doc.offsetHeight
+  doc.style.display = ''
 }
 
 /**
@@ -29,49 +58,32 @@ function setTheme(theme) {
   const lightModeButton = document.getElementById('light-mode-btn')
 
   if (theme === 'dark') {
-    // Apply dark mode by adding the 'dark' class to <html>
     document.documentElement.classList.add('dark')
-
-    // Hide the dark mode toggle button and show the light mode button
     darkModeButton.classList.add('hidden')
     lightModeButton.classList.remove('hidden')
-
-    // Save the user's preference in localStorage
     localStorage.setItem('theme', 'dark')
-
-    // Update the meta tag color for mobile (dark)
-    updateMetaThemeColor(true)
   } else {
-    // Remove dark mode by removing the 'dark' class from <html>
     document.documentElement.classList.remove('dark')
-
-    // Show the dark mode toggle button and hide the light mode button
     darkModeButton.classList.remove('hidden')
     lightModeButton.classList.add('hidden')
-
-    // Save the user's preference in localStorage
     localStorage.setItem('theme', 'light')
-
-    // Update the meta tag color for mobile (light)
-    updateMetaThemeColor(false)
   }
+
+  // Update the meta tag color for mobile
+  updateMetaThemeColor(theme === 'dark')
+
+  // Hack: forces Safari to re-check the new meta color
+  // (Optional) conditionally call if isIosSafari(), if you want
+  forceRepaint()
 }
 
-// Add click event listener to the dark mode button to switch to dark theme
+// Add click event listeners for toggles
 document.getElementById('dark-mode-btn').addEventListener('click', () => setTheme('dark'))
-
-// Add click event listener to the light mode button to switch to light theme
 document.getElementById('light-mode-btn').addEventListener('click', () => setTheme('light'))
 
-/**
- * Initializes the theme based on user preference or system settings.
- *
- * This IIFE (Immediately Invoked Function Expression) checks for a saved theme in localStorage.
- * If none is found, it falls back to the user's system preference.
- */
+// Immediately-invoked function to apply existing preference on load
 ;(function () {
   const savedTheme = localStorage.getItem('theme')
-
   if (savedTheme) {
     // Apply the saved theme preference
     setTheme(savedTheme)
