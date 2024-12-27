@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Relativity Theory Animation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Ensure the canvas covers the full viewport */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background-color: #1a202c; /* Dark background for contrast */
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center">
+    <!-- Canvas Element -->
+    <canvas id="relativityCanvas"></canvas>
+
+    <!-- JavaScript for Animation -->
+    <script>
+      const canvas = document.getElementById('relativityCanvas')
+      const ctx = canvas.getContext('2d')
+
+      // Set canvas size
+      function resizeCanvas() {
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
+      }
+      window.addEventListener('resize', resizeCanvas)
+      resizeCanvas()
+
+      // Grid parameters
+      const gridSpacing = 50
+      const lines = []
+      const amplitude = 20 // Amplitude of the wave (spacetime distortion)
+      const frequency = 0.002 // Frequency of the wave
+      const speed = 0.05 // Speed of wave propagation
+
+      // Initialize grid lines
+      for (let x = 0; x <= canvas.width; x += gridSpacing) {
+        lines.push({ x: x, y: 0 })
+      }
+      for (let y = 0; y <= canvas.height; y += gridSpacing) {
+        lines.push({ y: y, x: 0 })
+      }
+
+      // Animation loop
+      let time = 0
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+        ctx.strokeStyle = 'lightgray'
+        ctx.lineWidth = 1
+
+        ctx.beginPath()
+
+        // Draw vertical lines with sinusoidal wave distortion
+        for (let x = 0; x <= canvas.width; x += gridSpacing) {
+          ctx.moveTo(x, 0)
+          for (let y = 0; y <= canvas.height; y++) {
+            const offset = amplitude * Math.sin(frequency * (x + y) + time)
+            ctx.lineTo(x + offset, y)
+          }
+        }
+
+        // Draw horizontal lines with sinusoidal wave distortion
+        for (let y = 0; y <= canvas.height; y += gridSpacing) {
+          ctx.moveTo(0, y)
+          for (let x = 0; x <= canvas.width; x++) {
+            const offset = amplitude * Math.sin(frequency * (y + x) + time)
+            ctx.lineTo(x, y + offset)
+          }
+        }
+
+        ctx.stroke()
+
+        time += speed
+        requestAnimationFrame(animate)
+      }
+
+      animate()
+    </script>
+  </body>
+</html>
