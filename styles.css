@@ -74,3 +74,33 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* Base styling for emojis */
+.emoji {
+  position: absolute;
+  font-size: 2rem; /* Adjust size as needed */
+  user-select: none;
+  transition: transform 0.1s linear;
+}
+
+/* Rotation animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 20s linear infinite; /* Slow rotation for smoother animation */
+}
+
+/* Accessibility: Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .emoji {
+    animation: none !important;
+    transition: none !important;
+  }
+}
