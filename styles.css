@@ -75,6 +75,10 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
+/* --------------------------------------
+   Emojis
+-------------------------------------- */
+
 /* Base styling for emojis */
 .emoji {
   position: absolute;

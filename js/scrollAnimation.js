@@ -43,4 +43,12 @@ export default function handleScrollAnimation({ hiddenClasses = ['opacity-0', 't
 
   // Start observing each selected element
   elementsToAnimate.forEach((element) => observer.observe(element))
+
+  /**
+   * Reapply animations for dynamically added elements.
+   */
+  document.addEventListener('componentLoaded', () => {
+    const newElements = document.querySelectorAll('.animate-on-scroll:not([data-animated])')
+    newElements.forEach((element) => observer.observe(element))
+  })
 }

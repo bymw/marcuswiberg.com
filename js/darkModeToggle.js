@@ -32,7 +32,6 @@ function injectThemeMetaTag(color) {
  */
 function updateMetaThemeColor(isDark) {
   removeThemeMetaTag()
-  // iOS Safari is more likely to honor newly appended meta tags
   injectThemeMetaTag(isDark ? '#080808' : '#ffffff')
 }
 
@@ -43,8 +42,7 @@ function updateMetaThemeColor(isDark) {
 function forceRepaint() {
   const doc = document.documentElement
   doc.style.display = 'none'
-  // Force layout reflow
-  void doc.offsetHeight
+  void doc.offsetHeight // Force layout reflow
   doc.style.display = ''
 }
 
@@ -59,13 +57,13 @@ function setTheme(theme) {
 
   if (theme === 'dark') {
     document.documentElement.classList.add('dark')
-    darkModeButton.classList.add('hidden')
-    lightModeButton.classList.remove('hidden')
+    darkModeButton?.classList.add('hidden')
+    lightModeButton?.classList.remove('hidden')
     localStorage.setItem('theme', 'dark')
   } else {
     document.documentElement.classList.remove('dark')
-    darkModeButton.classList.remove('hidden')
-    lightModeButton.classList.add('hidden')
+    darkModeButton?.classList.remove('hidden')
+    lightModeButton?.classList.add('hidden')
     localStorage.setItem('theme', 'light')
   }
 
@@ -73,25 +71,34 @@ function setTheme(theme) {
   updateMetaThemeColor(theme === 'dark')
 
   // Hack: forces Safari to re-check the new meta color
-  // (Optional) conditionally call if isIosSafari(), if you want
   forceRepaint()
 }
 
 // Add click event listeners for toggles
-document.getElementById('dark-mode-btn').addEventListener('click', () => setTheme('dark'))
-document.getElementById('light-mode-btn').addEventListener('click', () => setTheme('light'))
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('dark-mode-btn')?.addEventListener('click', () => setTheme('dark'))
+  document.getElementById('light-mode-btn')?.addEventListener('click', () => setTheme('light'))
+})
 
-// Immediately-invoked function to apply existing preference on load
-;(function () {
-  const savedTheme = localStorage.getItem('theme')
-  if (savedTheme) {
-    // Apply the saved theme preference
-    setTheme(savedTheme)
-  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // If no preference is saved and the system prefers dark mode
-    setTheme('dark')
-  } else {
-    // Otherwise, default to light theme
-    setTheme('light')
+/**
+ * Reapply theme settings and event listeners when new components are loaded.
+ */
+document.addEventListener('componentLoaded', () => {
+  const darkModeButton = document.getElementById('dark-mode-btn')
+  const lightModeButton = document.getElementById('light-mode-btn')
+
+  if (darkModeButton && lightModeButton) {
+    darkModeButton.addEventListener('click', () => setTheme('dark'))
+    lightModeButton.addEventListener('click', () => setTheme('light'))
+
+    // Apply the saved theme or default to light
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme) {
+      setTheme(savedTheme)
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
   }
-})()
+})

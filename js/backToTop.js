@@ -5,13 +5,23 @@
  * Shows the button when the user scrolls down and scrolls smoothly to the top when clicked.
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', initializeBackToTop)
+
+document.addEventListener('componentLoaded', (event) => {
+  const { file } = event.detail
+  // Reinitialize if the Back to Top button is dynamically injected
+  if (file.includes('footer') || file.includes('components')) {
+    initializeBackToTop()
+  }
+})
+
+function initializeBackToTop() {
   // Select the "Back to Top" button by its ID
   const backToTopButton = document.getElementById('btn-back-to-top')
 
   // If the button is not found, log an error and exit
   if (!backToTopButton) {
-    console.error('Error: "Back to Top" button with ID "btn-back-to-top" not found.')
+    console.warn('Warning: "Back to Top" button with ID "btn-back-to-top" not found.')
     return
   }
 
@@ -46,4 +56,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize button visibility on page load
   toggleBackToTopButton()
-})
+}

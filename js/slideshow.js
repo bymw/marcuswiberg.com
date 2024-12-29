@@ -104,6 +104,18 @@ export default function initializeSlideshow() {
     resizeTimeout = setTimeout(updateSlideshow, 200)
   })
 
+  /**
+   * Reinitialize the slideshow when dynamically injected components are loaded.
+   */
+  document.addEventListener('componentLoaded', (event) => {
+    const { file } = event.detail
+    if (file === 'components/section-healthtrackr.html') {
+      console.log('Reinitializing slideshow after dynamic load.')
+      createDots()
+      updateSlideshow()
+    }
+  })
+
   // Initialize the dots and display the first slide
   createDots()
   updateSlideshow()
