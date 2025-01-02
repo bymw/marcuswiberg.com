@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Bar - Michelin Drink Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        background-color: #f8f8f8;
+        color: #1a1a1a;
+        font-family: 'Inter', sans-serif;
+      }
+      .pie-chart {
+        max-width: 150px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="text-center py-10 bg-white shadow-md">
+      <h1 class="text-5xl font-bold uppercase tracking-wide">The Bar</h1>
+      <p class="text-lg text-gray-500 mt-2">Exclusive Michelin-Level Drink Menu</p>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Espresso Martini -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h2 class="text-2xl font-semibold mb-4">Espresso Martini</h2>
+          <p class="text-gray-600 mb-2">142 Calories | A Dark Elegance</p>
+          <p class="text-gray-600 mb-4">Indulge in the rich, bold flavors of our Espresso Martini. This exquisite blend of premium vodka, creamy Kahlua, and freshly brewed espresso delivers a smooth and invigorating experience, perfect for those who savor the richness of life.</p>
+          <ul class="text-gray-600 mb-4">
+            <li>Vodka: 50 ml</li>
+            <li>Kahlua: 20 ml</li>
+            <li>Fresh Espresso: 30 ml</li>
+          </ul>
+          <p class="text-gray-600">Instructions: Brew espresso, shake all ingredients with ice, and strain into a martini glass.</p>
+          <canvas id="espressoMartiniChart" class="pie-chart mt-4"></canvas>
+        </div>
+
+        <!-- Whiskey Sour -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h2 class="text-2xl font-semibold mb-4">Whiskey Sour</h2>
+          <p class="text-gray-600 mb-2">141 Calories | Timeless Sophistication</p>
+          <p class="text-gray-600 mb-4">Experience the harmonious balance of tangy lemon and smooth whiskey in our Whiskey Sour. This classic cocktail offers a sharp yet smooth profile, leaving a memorable sweetness that lingers elegantly on the palate.</p>
+          <ul class="text-gray-600 mb-4">
+            <li>Whiskey: 50 ml</li>
+            <li>Fresh Lemon Juice: 20 ml</li>
+            <li>Sugar Syrup: 20 ml</li>
+          </ul>
+          <p class="text-gray-600">Instructions: Shake all ingredients with ice, strain into a rocks glass over fresh ice, and garnish with a cherry or orange peel.</p>
+          <canvas id="whiskeySourChart" class="pie-chart mt-4"></canvas>
+        </div>
+
+        <!-- Skinny Bitch -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h2 class="text-2xl font-semibold mb-4">Skinny Bitch</h2>
+          <p class="text-gray-600 mb-2">104 Calories | Refined Simplicity</p>
+          <p class="text-gray-600 mb-4">Savor the clean and crisp flavors of our Skinny Bitch. This minimalist cocktail combines premium vodka with sparkling soda water and a hint of fresh lime, offering a light and invigorating sip that is both sophisticated and delightful.</p>
+          <ul class="text-gray-600 mb-4">
+            <li>Vodka: 50 ml</li>
+            <li>Soda Water: ~100 ml</li>
+            <li>Fresh Lime Juice: 10 ml</li>
+          </ul>
+          <p class="text-gray-600">Instructions: Combine vodka and lime juice in a tall glass filled with homemade ice, top with soda water, and stir gently.</p>
+          <canvas id="skinnyBitchChart" class="pie-chart mt-4"></canvas>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const renderChart = (id, data, labels) => {
+        const ctx = document.getElementById(id).getContext('2d')
+        new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                data: data,
+                backgroundColor: ['#d1d5db', '#9ca3af', '#6b7280'],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: true,
+                position: 'bottom',
+              },
+            },
+          },
+        })
+      }
+
+      // Render charts
+      renderChart('espressoMartiniChart', [6, 4, 7], ['Sweetness', 'Bitterness', 'Strength'])
+      renderChart('whiskeySourChart', [4, 2, 8], ['Sweetness', 'Bitterness', 'Strength'])
+      renderChart('skinnyBitchChart', [1, 1, 6], ['Sweetness', 'Bitterness', 'Strength'])
+    </script>
+  </body>
+</html>
