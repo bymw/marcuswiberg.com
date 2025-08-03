@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcus' Blood Markers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 min-h-screen p-8">
+    <h1 class="text-4xl font-semibold mb-8 text-center tracking-tight">Marcus' Blood Marker Dashboard</h1>
+
+    <div class="overflow-x-auto shadow-lg rounded-xl">
+      <table class="min-w-full text-sm text-left border border-gray-200">
+        <thead class="bg-gray-100 text-gray-600 text-xs uppercase">
+          <tr>
+            <th class="px-5 py-3 border-b">Biomarker</th>
+            <th class="px-5 py-3 border-b">Your Value (Date)</th>
+            <th class="px-5 py-3 border-b">Reference Range</th>
+            <th class="px-5 py-3 border-b">Optimal Longevity Target</th>
+            <th class="px-5 py-3 border-b">Bryan Johnson's Value</th>
+            <th class="px-5 py-3 border-b">Risk Category</th>
+            <th class="px-5 py-3 border-b">System Tag</th>
+            <th class="px-5 py-3 border-b">Interpretation & Action Plan</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <!-- Existing rows retained -->
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">Total Cholesterol</td>
+            <td class="px-5 py-3">199 mg/dL (Jan 2025)</td>
+            <td class="px-5 py-3">&lt;201 mg/dL</td>
+            <td class="px-5 py-3">130–160 mg/dL</td>
+            <td class="px-5 py-3">137 mg/dL</td>
+            <td class="px-5 py-3">🟠 Moderate Cardiovascular Risk</td>
+            <td class="px-5 py-3">💓 Cardiovascular</td>
+            <td class="px-5 py-3">Reduce saturated fat and cholesterol-rich foods; increase fiber, omega-3 intake, and physical activity.</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">Non-HDL Cholesterol</td>
+            <td class="px-5 py-3">156 mg/dL (Jan 2025)</td>
+            <td class="px-5 py-3">&lt;151 mg/dL</td>
+            <td class="px-5 py-3">&lt;100 mg/dL</td>
+            <td class="px-5 py-3">65 mg/dL</td>
+            <td class="px-5 py-3">🔴 High Cardiovascular Risk</td>
+            <td class="px-5 py-3">💓 Cardiovascular</td>
+            <td class="px-5 py-3">Optimize LDL-lowering strategies, including diet (plant-based, fiber-rich), and omega-3 supplementation.</td>
+          </tr>
+          <tr class="bg-green-50">
+            <td class="px-5 py-3 font-medium">FSH</td>
+            <td class="px-5 py-3">12.5 IU/L (Jan 2025)</td>
+            <td class="px-5 py-3">1.3–19.3 IU/L</td>
+            <td class="px-5 py-3">Mid-normal</td>
+            <td class="px-5 py-3">6.8 IU/L</td>
+            <td class="px-5 py-3">🟢 Optimal</td>
+            <td class="px-5 py-3">🧠 Hormonal</td>
+            <td class="px-5 py-3">No action needed. Continue with balanced hormonal support and lifestyle practices.</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">Free Testosterone</td>
+            <td class="px-5 py-3">0.13 ng/mL (Jan 2025)</td>
+            <td class="px-5 py-3">0.06–0.18 ng/mL</td>
+            <td class="px-5 py-3">15–25 pg/mL</td>
+            <td class="px-5 py-3">22.3 pg/mL</td>
+            <td class="px-5 py-3">🟡 Hormonal Disruption</td>
+            <td class="px-5 py-3">🧠 Hormonal</td>
+            <td class="px-5 py-3">Enhance SHBG control, improve zinc, boron intake, manage cortisol, consider strength training or DHEA support.</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">HbA1c</td>
+            <td class="px-5 py-3">5.4% (Jun 2023)</td>
+            <td class="px-5 py-3">&lt;5.7%</td>
+            <td class="px-5 py-3">4.6–5.0%</td>
+            <td class="px-5 py-3">4.9%</td>
+            <td class="px-5 py-3">🟠 High Metabolic Age Risk</td>
+            <td class="px-5 py-3">🧬 Metabolic</td>
+            <td class="px-5 py-3">Reduce refined carbs, increase fiber, perform regular zone 2 cardio, consider berberine/metformin protocols.</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">SHBG</td>
+            <td class="px-5 py-3">27.4 nmol/L (Jan 2025)</td>
+            <td class="px-5 py-3">18.3–54.1 nmol/L</td>
+            <td class="px-5 py-3">20–40 nmol/L</td>
+            <td class="px-5 py-3">41.1 nmol/L</td>
+            <td class="px-5 py-3">🟡 Hormonal Disruption</td>
+            <td class="px-5 py-3">🧠 Hormonal</td>
+            <td class="px-5 py-3">Slightly low SHBG may reflect optimal bioavailability. Monitor testosterone balance and liver health.</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">CRP (hs)</td>
+            <td class="px-5 py-3">0.8 mg/L (Aug 2023)</td>
+            <td class="px-5 py-3">0–3.0 mg/L</td>
+            <td class="px-5 py-3">&lt;0.5 mg/L</td>
+            <td class="px-5 py-3">0.3 mg/L</td>
+            <td class="px-5 py-3">🟠 Inflammatory Risk</td>
+            <td class="px-5 py-3">🦠 Inflammation</td>
+            <td class="px-5 py-3">Lower inflammation via better sleep, anti-inflammatory foods (olive oil, turmeric), omega-3s, stress reduction.</td>
+          </tr>
+          <tr class="bg-green-50">
+            <td class="px-5 py-3 font-medium">Vitamin D</td>
+            <td class="px-5 py-3">99.5 nmol/L (Jun 2023)</td>
+            <td class="px-5 py-3">75–250 nmol/L</td>
+            <td class="px-5 py-3">100–150 nmol/L</td>
+            <td class="px-5 py-3">120 nmol/L</td>
+            <td class="px-5 py-3">🟢 Optimal</td>
+            <td class="px-5 py-3">☀️ Immune / Hormonal</td>
+            <td class="px-5 py-3">Slightly below ideal range — continue daily supplementation with D3+K2 for optimization.</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">Ferritin</td>
+            <td class="px-5 py-3">384 µg/L (Jun 2023)</td>
+            <td class="px-5 py-3">30–400 µg/L</td>
+            <td class="px-5 py-3">70–150 µg/L</td>
+            <td class="px-5 py-3">109 µg/L</td>
+            <td class="px-5 py-3">🟠 Iron Load Risk</td>
+            <td class="px-5 py-3">🩸 Iron Stores</td>
+            <td class="px-5 py-3">Too high. Avoid iron supplements, reduce red meat, increase polyphenol-rich foods (e.g., green tea).</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">Vitamin B12</td>
+            <td class="px-5 py-3">387 pmol/L (Jun 2023)</td>
+            <td class="px-5 py-3">150–700 pmol/L</td>
+            <td class="px-5 py-3">450–700 pmol/L</td>
+            <td class="px-5 py-3">610 pmol/L</td>
+            <td class="px-5 py-3">🟠 Energy & Cognitive Risk</td>
+            <td class="px-5 py-3">🧠 Neurological</td>
+            <td class="px-5 py-3">Increase methylated B-complex intake (methylcobalamin), include eggs, fish, and leafy greens in diet.</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">Folic Acid</td>
+            <td class="px-5 py-3">5.9 nmol/L (Jun 2023)</td>
+            <td class="px-5 py-3">&gt;7.5 nmol/L</td>
+            <td class="px-5 py-3">&gt;15 nmol/L</td>
+            <td class="px-5 py-3">20.4 nmol/L</td>
+            <td class="px-5 py-3">🟠 Methylation Risk</td>
+            <td class="px-5 py-3">🧬 DNA Synthesis</td>
+            <td class="px-5 py-3">Increase folate-rich foods (greens, beans), supplement with methylfolate form, check B12 synergy.</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">LDH (Lactate Dehydrogenase)</td>
+            <td class="px-5 py-3">168 U/L (Jan 2025)</td>
+            <td class="px-5 py-3">135–225 U/L</td>
+            <td class="px-5 py-3">160–180 U/L</td>
+            <td class="px-5 py-3">173 U/L</td>
+            <td class="px-5 py-3">🟢 Optimal</td>
+            <td class="px-5 py-3">🧬 Metabolic/Cellular Health</td>
+            <td class="px-5 py-3">Maintain healthy mitochondrial activity through aerobic fitness, antioxidants, and low oxidative stress lifestyle.</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">Uric Acid</td>
+            <td class="px-5 py-3">345 µmol/L (Jan 2025)</td>
+            <td class="px-5 py-3">200–420 µmol/L</td>
+            <td class="px-5 py-3">250–300 µmol/L</td>
+            <td class="px-5 py-3">266 µmol/L</td>
+            <td class="px-5 py-3">🟠 Metabolic Risk</td>
+            <td class="px-5 py-3">🧬 Metabolic / Kidney</td>
+            <td class="px-5 py-3">Reduce fructose, alcohol, red meat. Increase hydration, cherries, vitamin C, and polyphenols.</td>
+          </tr>
+          <tr class="bg-yellow-50">
+            <td class="px-5 py-3 font-medium">FAI (Free Androgen Index)</td>
+            <td class="px-5 py-3">19.78 (Jan 2025)</td>
+            <td class="px-5 py-3">15–30</td>
+            <td class="px-5 py-3">20–30</td>
+            <td class="px-5 py-3">25</td>
+            <td class="px-5 py-3">🟡 Hormonal Monitoring</td>
+            <td class="px-5 py-3">🧠 Hormonal</td>
+            <td class="px-5 py-3">Maintain testosterone optimization, reduce SHBG, support with zinc, vitamin D, and resistance training.</td>
+          </tr>
+          <tr class="bg-green-50">
+            <td class="px-5 py-3 font-medium">AFP (Alpha-Fetoprotein)</td>
+            <td class="px-5 py-3">1.9 ng/mL (Jan 2025)</td>
+            <td class="px-5 py-3">0.0–10.0 ng/mL</td>
+            <td class="px-5 py-3">&lt;3.0 ng/mL</td>
+            <td class="px-5 py-3">1.8</td>
+            <td class="px-5 py-3">🟢 Optimal</td>
+            <td class="px-5 py-3">🧬 Tumor Surveillance</td>
+            <td class="px-5 py-3">No risk detected. Continue cancer-prevention lifestyle: low toxin load, high antioxidant intake.</td>
+          </tr>
+          <tr class="bg-green-50">
+            <td class="px-5 py-3 font-medium">β-HCG</td>
+            <td class="px-5 py-3">&lt;1 IU/L (Jan 2025)</td>
+            <td class="px-5 py-3">&lt;5 IU/L</td>
+            <td class="px-5 py-3">&lt;2 IU/L</td>
+            <td class="px-5 py-3">&lt;1</td>
+            <td class="px-5 py-3">🟢 Optimal</td>
+            <td class="px-5 py-3">🧬 Tumor Surveillance</td>
+            <td class="px-5 py-3">No risk detected. Maintain proactive cancer prevention and regular screenings.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

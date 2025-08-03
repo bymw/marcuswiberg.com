@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skräddarsydda Träprodukter – Beställning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <div class="max-w-3xl mx-auto px-4 py-16">
+      <h1 class="text-3xl font-semibold text-center mb-8">Beställ Skräddarsydda Träprodukter</h1>
+
+      <p class="mb-8 text-center">Fyll i informationen nedan för att få en personlig offert. Fält markerade med * är obligatoriska. Är du osäker kan du lämna övriga fält tomma för konsultation.</p>
+
+      <form class="space-y-8">
+        <!-- Kundtyp (obligatorisk) -->
+        <section>
+          <h2 class="text-xl font-semibold mb-4">Typ av kund *</h2>
+          <div class="flex items-center gap-6">
+            <label class="flex items-center">
+              <input type="radio" name="customerType" value="private" required class="mr-2" />
+              Privatperson
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="customerType" value="company" required class="mr-2" />
+              Företagskund
+            </label>
+          </div>
+        </section>
+
+        <!-- Kontaktuppgifter -->
+        <section>
+          <h2 class="text-xl font-semibold mb-4">Kontaktuppgifter</h2>
+          <input type="text" placeholder="Fullständigt namn * (t.ex. Anna Svensson)" required class="w-full px-4 py-3 rounded-md border border-gray-300" />
+          <input type="email" placeholder="E-post * (t.ex. namn@example.com)" required class="w-full px-4 py-3 rounded-md border border-gray-300 mt-4" />
+          <input type="tel" placeholder="Telefonnummer (t.ex. 070-123 45 67)" class="w-full px-4 py-3 rounded-md border border-gray-300 mt-4" />
+          <input type="text" placeholder="Företagsnamn (för företagskunder, t.ex. Svensson AB)" class="w-full px-4 py-3 rounded-md border border-gray-300 mt-4" />
+          <select class="w-full px-4 py-3 rounded-md border border-gray-300 mt-4">
+            <option value="">Föredragen kontaktmetod (valfritt)</option>
+            <option>E-post</option>
+            <option>Telefon</option>
+            <option>Videosamtal</option>
+          </select>
+        </section>
+
+        <!-- Projektinformation -->
+        <section>
+          <h2 class="text-xl font-semibold mb-4">Projektinformation</h2>
+          <input type="text" placeholder="Projekttitel * (t.ex. Matbord, Kontorsmöbler, Terrass-set)" required class="w-full px-4 py-3 rounded-md border border-gray-300" />
+          <textarea placeholder="Beskriv gärna din vision så detaljerat som möjligt, t.ex. modern stil, rustikt utseende, inspirationsbilder från Pinterest eller specifika funktioner du önskar." class="w-full px-4 py-3 rounded-md border border-gray-300 mt-4 h-32"></textarea>
+        </section>
+
+        <!-- Syfte och placering -->
+        <section>
+          <h2 class="text-xl font-semibold mb-4">Syfte och Placering</h2>
+          <select class="w-full px-4 py-3 rounded-md border border-gray-300">
+            <option>Användningsområde (valfritt)</option>
+            <option>Inomhus</option>
+            <option>Utomhus</option>
+            <option>Både och</option>
+          </select>
+          <input type="text" placeholder="Placering (t.ex. vardagsrum, kontor, altan)" class="w-full px-4 py-3 rounded-md border border-gray-300 mt-4" />
+          <input type="text" placeholder="Miljömässiga hänsyn (t.ex. fuktigt utrymme, direkt solljus, utsatt för regn)" class="w-full px-4 py-3 rounded-md border border-gray-300 mt-4" />
+        </section>
+
+        <!-- Specifikationer -->
+        <section>
+          <h2 class="text-xl font-semibold mb-4">Specifikationer</h2>
+          <input type="text" placeholder="Mått (Höjd x Bredd x Djup i cm, t.ex. 75x120x60 cm)" class="w-full px-4 py-3 rounded-md border border-gray-300" />
+          <input type="text" placeholder="Önskat material (t.ex. Ek, Valnöt, Furu)" class="w-full px-4 py-3 rounded-md border border-gray-300 mt-4" />
+          <input type="text" placeholder="Färg eller ytbehandling (t.ex. natur, lackad vit, matt svart)" class="w-full px-4 py-3 rounded-md border border-gray-300 mt-4" />
+          <input type="text" placeholder="Specialfunktioner (t.ex. inbyggd belysning, dold förvaring, gravyr)" class="w-full px-4 py-3 rounded-md border border-gray-300 mt-4" />
+        </section>
+
+        <!-- Budget och tidsram -->
+        <section>
+          <h2 class="text-xl font-semibold mb-4">Budget och Tidsram</h2>
+          <input type="text" placeholder="Budgetram (t.ex. max 19,000 SEK)" class="w-full px-4 py-3 rounded-md border border-gray-300" />
+          <input type="text" placeholder="Önskat leveransdatum eller tidsram (t.ex. inom 4 veckor)" class="w-full px-4 py-3 rounded-md border border-gray-300 mt-4" />
+        </section>
+
+        <!-- Skicka-knapp -->
+        <button type="submit" class="w-full py-3 bg-gray-900 text-white rounded-md hover:bg-gray-700 transition duration-300">Skicka förfrågan</button>
+      </form>
+    </div>
+  </body>
+</html>
