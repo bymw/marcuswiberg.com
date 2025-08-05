@@ -34,6 +34,8 @@ function initScrollAnimations() {
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize scroll animations
   initScrollAnimations()
+
+
 })
 
 /**
