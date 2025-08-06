@@ -4,7 +4,6 @@
  * Initializes the main functionalities of the website once the document is fully loaded.
  *
  * Dependencies:
- * - scrollAnimation.js: Handles scroll-triggered animations.
  * - slideshow.js: Manages the slideshow/carousel functionality.
  * - darkModeToggle.js: Enables dark mode toggling.
  * - backToTop.js: Implements the "Back to Top" button functionality.
