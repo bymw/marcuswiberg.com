@@ -3,8 +3,8 @@
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <header class="flex flex-col md:flex-row items-center gap-x-12">
       <!-- Profile Image -->
-      <div class="flex-shrink-0 mb-8 md:mb-0">
-        <img src="media/profile.jpg" alt="Marcus Wiberg" class="w-48 h-48 rounded-full object-cover shadow-lg">
+      <div class="flex-shrink-0 mb-8 md:mb-0 group overflow-hidden rounded-full">
+        <img id="profile-photo" src="media/profile.jpg" alt="Marcus Wiberg" class="w-48 h-48 rounded-full object-cover shadow-lg transform scale-100 transition-transform duration-[9000ms] ease-out group-hover:scale-110" />
       </div>
 
       <!-- Text Content -->
@@ -19,19 +19,19 @@
             <!-- Social Icons -->
             <div class="flex items-center space-x-4">
               <!-- LinkedIn Icon -->
-              <a href="https://www.linkedin.com/in/marcuswiberg/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="LinkedIn" title="Follow me on LinkedIn">
+              <a href="https://www.linkedin.com/in/marcuswiberg/" target="_blank" rel="noopener noreferrer" class="transition duration-200 transform hover:-translate-y-1 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="LinkedIn" title="Follow me on LinkedIn">
                 <img src="/media/svgs/linkedin-light.svg" alt="LinkedIn" class="w-6 h-6 dark:hidden" />
                 <img src="/media/svgs/linkedin-dark.svg" alt="LinkedIn" class="w-6 h-6 hidden dark:block" />
               </a>
 
               <!-- X (formerly Twitter) Icon -->
-              <a href="https://x.com/immarcuswiberg" target="_blank" rel="noopener noreferrer" class="hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="X" title="Follow me on X">
+              <a href="https://x.com/immarcuswiberg" target="_blank" rel="noopener noreferrer" class="transition duration-200 transform hover:-translate-y-1 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="X" title="Follow me on X">
                 <img src="/media/svgs/x-light.svg" alt="Twitter" class="w-6 h-6 dark:hidden" />
                 <img src="/media/svgs/x-dark.svg" alt="Twitter" class="w-6 h-6 hidden dark:block" />
               </a>
 
               <!-- GitHub Icon -->
-              <a href="https://github.com/bymw/marcuswiberg.com" target="_blank" rel="noopener noreferrer" class="hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="GitHub" title="Follow me on GitHub">
+              <a href="https://github.com/bymw/marcuswiberg.com" target="_blank" rel="noopener noreferrer" class="transition duration-200 transform hover:-translate-y-1 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="GitHub" title="Follow me on GitHub">
                 <img src="/media/svgs/github-light.svg" alt="GitHub" class="w-6 h-6 dark:hidden" />
                 <img src="/media/svgs/github-dark.svg" alt="GitHub" class="w-6 h-6 hidden dark:block" />
               </a>
@@ -47,7 +47,7 @@
                 <img src="/media/svgs/location-dark.svg" alt="GitHub" class="w-6 h-6 hidden dark:block" />
               </div>
               <!-- Location Text -->
-              <p class="tracking-normal">Currently in <span class="font-bold">Berlin, Germany</span></p>
+              <p class="tracking-normal">Swedish / American · Based in <span class="font-bold">Berlin, Germany</span></p>
             </div>
           </div>
         </div>
